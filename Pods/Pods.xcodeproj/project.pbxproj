@@ -1,0 +1,1362 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		095406039B4D371E48D08B38A2975AC8 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B08C92044239E60F5CF848C38572A76 /* Error.swift */; };
+		0AFB9A80ED58179EF62E5A7BD1C8765E /* CustomDateFormatTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6D7A98B1D6295281F3B6A3B08FE014 /* CustomDateFormatTransform.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		12605F18D2DBE56DAD951B397D026443 /* KingfisherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6603C88A1F40423703325539F1D2096 /* KingfisherManager.swift */; };
+		154BB0A41DE18CD563021102F41751F0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1830145CF1F6809BE1B3D5F36CCC2BC2 /* Foundation.framework */; };
+		16102E4E35FAA0FC4161282FECE56469 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE00FD7EA21F1A44FE24F8FB7DDF6A5 /* Timeline.swift */; };
+		187B55EE9BD4F3230CD80C722593DF12 /* Pods-Facebook Photos App-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DADD5260F8598B89AED0FEC54099CED6 /* Pods-Facebook Photos App-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1D836ABF865CAEA327E652EC2C4FBCC6 /* ObjectMapper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D4DD0E75DD39BFF4F23365BE763D0575 /* ObjectMapper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27E0E8C6B9E13273FF2CD9E1366E7D53 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C849A49B4E2F770E4B2807D5CAACB67B /* ImageDownloader.swift */; };
+		2AE4701DFC81726D599E658AD903795F /* ThreadHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB235AC88D7F37617FEC9894761FA67 /* ThreadHelper.swift */; };
+		2BF2178AA00B1BC64FF02738CD0B8A04 /* DateFormatterTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51F5866A0375017326E04CC35DFA9AFA /* DateFormatterTransform.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2D3405986FC586FA6C0A5E0B6BA7E64E /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED1AF4DE65B208892D048F21B5004BCD /* Validation.swift */; };
+		34CCDCA848A701466256BC2927DA8856 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C8D37F008C94221C504C2E046982BB /* NetworkReachabilityManager.swift */; };
+		36CED2B67C4E2DACB7468A12CCA99CBC /* ImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C1171465E3452BA989FEF70F908DB8 /* ImageView+Kingfisher.swift */; };
+		383F610CD70ED77F1AF3D233FE0D72E3 /* TransformOf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AC46700571A41747B04284B09AB88EE /* TransformOf.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3EA8F215C9C1432D74E5CCA4834AA8C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F6637CF32B4CB8D597D30ED90EE766 /* ResponseSerialization.swift */; };
+		4081EA628AF0B73AC51FFB9D7AB3B89E /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628E269DDFC0BE9A2ED3C2BAD06EF381 /* Manager.swift */; };
+		489C5378798980D111A125C798C4C717 /* ImagePrefetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576C787C7F4322A5B8B42C532FA75685 /* ImagePrefetcher.swift */; };
+		509B711CF6F88462C6D8D02E6AF5A413 /* Mappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C10318181466D1B6A0848CF149CAA4 /* Mappable.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		525FAA98CD8CB4F408E6CEE1BA5B50CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1830145CF1F6809BE1B3D5F36CCC2BC2 /* Foundation.framework */; };
+		59EA2AC0F7D9188ECA8BA60CBB9B89FA /* Pods-Facebook Photos AppUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D214B544A40B236EEE0F8CC1C384E701 /* Pods-Facebook Photos AppUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5A0CFD3C073D623FEFA90C74C249A118 /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63CA9C650AC1735FBE05C4D10827B8DC /* Map.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		5BC19E6E0F199276003F0AF96838BCE5 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA166E573553DB6F7462B487DED44D2 /* Upload.swift */; };
+		5CB05FBCB32D21E194B5ECF680CB6AE0 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D389EEFECB6D58F4BE8B1D1441832EB /* Download.swift */; };
+		62E8346F03C03E7F4D631361F325689E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8FB7581F2C43FC7D442D67823FA9FB /* Response.swift */; };
+		72862F55375EFD40727324046B170D1B /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DE0FAC1726ABABC5715A397964D3AE /* Operators.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		728F41EDA73FA18E508ACB481631531C /* TransformType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67D2C3101E1F65BA7E9CF8AD3E64DF70 /* TransformType.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		7B48852C4D848FA2DA416A98F6425869 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE0F15AB27F9FC5911873AD8D406E41 /* ServerTrustPolicy.swift */; };
+		7DEEEDB19F350A22CBD1F8FBC35D1A71 /* UIButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B9467F6D98597827634DBBE09C3271 /* UIButton+Kingfisher.swift */; };
+		818B5C085BA46F1D322E274D2C20250E /* Pods-Facebook Photos AppUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DAD3B64FC140491F6BD2FB4CFE7F8ED /* Pods-Facebook Photos AppUITests-dummy.m */; };
+		862737E44137B1507FD35EEF2000BADF /* ToJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1EED90AE7320D63366D56C4417A726 /* ToJSON.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8D86694EEF55D4C69D31AD3D9D07F39F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1830145CF1F6809BE1B3D5F36CCC2BC2 /* Foundation.framework */; };
+		8EB11202167FCDDF1257AAAB1D1FB244 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278D61F2AA0254834A62715540200579 /* Alamofire.swift */; };
+		9469DF81ECB494E84675969B5E13374C /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 39703C33A15FD81B091FDC9900881821 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9D44B4AABB3F3E5DE75A65E5B84E0FD2 /* FromJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAED5827ACAC43B523F072DFC24AE99B /* FromJSON.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9E31ACD62E93F0A32BF9F9D70302E9AC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1830145CF1F6809BE1B3D5F36CCC2BC2 /* Foundation.framework */; };
+		A1BD9A61F21F55188DF9E2182020752E /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A64ED1893EE1C1FEC388B638C50656 /* ImageCache.swift */; };
+		A27A090A6A1FD9E301D7F5164A4AB6B2 /* Kingfisher.h in Headers */ = {isa = PBXBuildFile; fileRef = 7885948F188A5F71FD36E3F5CF6C32F7 /* Kingfisher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9EFCC50CCBC260466E16DE13B85A2AA /* URLTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDAB2B97BB517C08A3A4F12B1678454 /* URLTransform.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		AA314156AC500125F4078EE968DB14C6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B032469928DF93AD57FE9ED321F0E34F /* Result.swift */; };
+		AA49567C1B7A4C19CA6C290B153FFE9E /* Kingfisher-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 83424D4AEDA5B886FEBFDE24FD1B1932 /* Kingfisher-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA99BBC28301940217DCCD986049EAA0 /* ImageTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B88132FABB8F95A526FBB245C05233DC /* ImageTransition.swift */; };
+		AB8C9B9F3615B2FDABD9AD30557A3A8B /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3802220893A00D7D6CEA0485710D92 /* Resource.swift */; };
+		ADF19C953CE2A7D0B72EC93A81FCCC26 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFEE45AAEF21B27A46EF1C2D95B2FA /* Alamofire-dummy.m */; };
+		AE4CF87C02C042DF13ED5B21C4FDC1E0 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC418A190E22991AFFEB328AC32E2C18 /* Stream.swift */; };
+		AEB132ADCC6BE0BF8A694A25F2E97099 /* Pods-Facebook Photos AppTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DA9DE09633E051B5001B89C00C5DFF21 /* Pods-Facebook Photos AppTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4D9E3EA99A8E7E4F14B08A04EF95478 /* ISO8601DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1FBD92E29D6916A3BE2C3810AAD1A9 /* ISO8601DateTransform.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B67916921F548495427A4D5AF4EC0720 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836918D3472E1F9A6458AA1BAF5D836F /* Mapper.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BE41196F6A3903E59C3306FE3F8B43FE /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2610FA40E34DD537082EF6FE8E1A63A7 /* Notifications.swift */; };
+		BE7EAFD57B7468C86E86EA21EB163873 /* Pods-Facebook Photos App-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BF3A27F6DA57C15944F072DDFB1534E /* Pods-Facebook Photos App-dummy.m */; };
+		C0DB70AB368765DC64BFB5FEA75E0696 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95709928FD7BF3A7A1B657EA91ACCB21 /* ParameterEncoding.swift */; };
+		C1B8F820475069A1ABD8F0DC92F57DDB /* Kingfisher-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD0322DC668C3F644B88D8C2C5DC296 /* Kingfisher-dummy.m */; };
+		C5549D3A0527EFEB2DC68DF2C10ADE0C /* DateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06E2298CF447F17C8104882DC65A4FB /* DateTransform.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C7B6DD7C0456C50289A2C381DFE9FA3F /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F438F7168880EB3A195B18A396EC8180 /* MultipartFormData.swift */; };
+		D32518716EE0A0C8C73A7802EF0E08F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1830145CF1F6809BE1B3D5F36CCC2BC2 /* Foundation.framework */; };
+		E93D03A1E5A563413197390D48D8C41D /* Pods-Facebook Photos AppTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D99CBBE815FE05F86FA581FBC11FA3A /* Pods-Facebook Photos AppTests-dummy.m */; };
+		EB539D7F6DD4FE08C02F1C1D1C4606BC /* KingfisherOptionsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C96E353F93A2CA791044695D9766C8 /* KingfisherOptionsInfo.swift */; };
+		EB6932DFB4348CAF33AED9451B976845 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62BD1DE0DAC7AF9BD8C1EA3758E5F3AC /* CFNetwork.framework */; };
+		ECE69B2502211AB44484914730890502 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30BF73594FC7D3621C249DF51A7947D /* String+MD5.swift */; };
+		EFE92E8D3813DD26E78E93EEAF6D7E7E /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67ADF0BC90859497D4CA8A5A639DE41C /* Request.swift */; };
+		F713B587D0A5AD9E32CE75E0F5E84855 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFB952B9BF80C7F4C2A3ED71DBF0DD3 /* Image.swift */; };
+		F82198F34DD14753A42F4328CD5E7A6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1830145CF1F6809BE1B3D5F36CCC2BC2 /* Foundation.framework */; };
+		FC3220D9ED189CDEFE4F1E159C223B08 /* EnumTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6DD5FD142EF60F7DE7D5FA31E44F0E7 /* EnumTransform.swift */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FDFA7C67563FE1FC5853118261840AA0 /* ObjectMapper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 67D1E8CCBF52504D82FC8845B7DF2563 /* ObjectMapper-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0727EA134FD0C23B441C8A30D1B56D41 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C8F54543305BD95F34FAB796C9CAAFCA;
+			remoteInfo = ObjectMapper;
+		};
+		395C5EFD8B603245DAF3EF663E26FA52 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C8F54543305BD95F34FAB796C9CAAFCA;
+			remoteInfo = ObjectMapper;
+		};
+		4D9627C96E6D49DF9983D98114AC224F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F91226101ECE8FCFD221A3EC54481F82;
+			remoteInfo = Kingfisher;
+		};
+		61BA541BDC542385FC2CF9A0E27F4142 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F91226101ECE8FCFD221A3EC54481F82;
+			remoteInfo = Kingfisher;
+		};
+		74750F1C14D8EDD9D9974A8E39E3B7DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79C040AFDDCE1BCBF6D8B5EB0B85887F;
+			remoteInfo = Alamofire;
+		};
+		BCA263B399EAD17934560F7FF3548D9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79C040AFDDCE1BCBF6D8B5EB0B85887F;
+			remoteInfo = Alamofire;
+		};
+		DCF7E2F5C0E0E4A42F3FEC3F3CA910A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79C040AFDDCE1BCBF6D8B5EB0B85887F;
+			remoteInfo = Alamofire;
+		};
+		DD761C9BC7FF86F5FD44FB85D52DEE8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F91226101ECE8FCFD221A3EC54481F82;
+			remoteInfo = Kingfisher;
+		};
+		F0310B2651EA4DCA57F6245EF1F3BAA6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C8F54543305BD95F34FAB796C9CAAFCA;
+			remoteInfo = ObjectMapper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0AC46700571A41747B04284B09AB88EE /* TransformOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformOf.swift; path = ObjectMapper/Transforms/TransformOf.swift; sourceTree = "<group>"; };
+		0D4E89CEAA47459AFAF43153E593A342 /* Pods-Facebook Photos App-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Facebook Photos App-acknowledgements.plist"; sourceTree = "<group>"; };
+		13BA7AB0D26D1AF51D4581E404CDB386 /* ObjectMapper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ObjectMapper.xcconfig; sourceTree = "<group>"; };
+		17059B8A9AD5A8B86646F9B9CDE34A28 /* Pods-Facebook Photos AppUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Facebook Photos AppUITests-frameworks.sh"; sourceTree = "<group>"; };
+		1731ED33F49A71C5D4DFF58435452974 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		173C7253FCF877F8BF0B9C298B63B807 /* Pods_Facebook_Photos_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Facebook_Photos_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		17F31E48890FE0609E9F579C3377F184 /* Pods-Facebook Photos App.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Facebook Photos App.modulemap"; sourceTree = "<group>"; };
+		1830145CF1F6809BE1B3D5F36CCC2BC2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		1A8FB7581F2C43FC7D442D67823FA9FB /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		25C8D37F008C94221C504C2E046982BB /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		2610FA40E34DD537082EF6FE8E1A63A7 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
+		278D61F2AA0254834A62715540200579 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		28DE0FAC1726ABABC5715A397964D3AE /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = ObjectMapper/Core/Operators.swift; sourceTree = "<group>"; };
+		290F748FDB67BD652156DE7CAEF46F98 /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B08C92044239E60F5CF848C38572A76 /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Source/Error.swift; sourceTree = "<group>"; };
+		2CFB952B9BF80C7F4C2A3ED71DBF0DD3 /* Image.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Image.swift; path = Sources/Image.swift; sourceTree = "<group>"; };
+		2D389EEFECB6D58F4BE8B1D1441832EB /* Download.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Download.swift; path = Source/Download.swift; sourceTree = "<group>"; };
+		2E48C4B9C7A2F67E209FE2B538C661A8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E4FC17C86DAD5A43A90F305ADFD947E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F11DE0CAAC5E7C6AD7D87DFD67826A7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FB235AC88D7F37617FEC9894761FA67 /* ThreadHelper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ThreadHelper.swift; path = Sources/ThreadHelper.swift; sourceTree = "<group>"; };
+		2FD950EFED468264600FE8A0C4179BF7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31B7336AE0B8D2EBDEAB1B36876A4C50 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39703C33A15FD81B091FDC9900881821 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
+		3E6D7A98B1D6295281F3B6A3B08FE014 /* CustomDateFormatTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomDateFormatTransform.swift; path = ObjectMapper/Transforms/CustomDateFormatTransform.swift; sourceTree = "<group>"; };
+		3F774674C998ED38C4B7536FA39BF8FE /* Pods-Facebook Photos AppTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Facebook Photos AppTests-frameworks.sh"; sourceTree = "<group>"; };
+		4B1FBD92E29D6916A3BE2C3810AAD1A9 /* ISO8601DateTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ISO8601DateTransform.swift; path = ObjectMapper/Transforms/ISO8601DateTransform.swift; sourceTree = "<group>"; };
+		4CCCAD405AE0C9DE20F6D5A786D700E8 /* Pods-Facebook Photos AppUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Facebook Photos AppUITests-resources.sh"; sourceTree = "<group>"; };
+		4FCC981A163CD5A5538EDC26DCB2AF20 /* Pods-Facebook Photos AppTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Facebook Photos AppTests.modulemap"; sourceTree = "<group>"; };
+		51F5866A0375017326E04CC35DFA9AFA /* DateFormatterTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateFormatterTransform.swift; path = ObjectMapper/Transforms/DateFormatterTransform.swift; sourceTree = "<group>"; };
+		52F6637CF32B4CB8D597D30ED90EE766 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		576C787C7F4322A5B8B42C532FA75685 /* ImagePrefetcher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImagePrefetcher.swift; path = Sources/ImagePrefetcher.swift; sourceTree = "<group>"; };
+		5892E598221ACF15AFC7AA8B869B07E8 /* Pods-Facebook Photos AppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Facebook Photos AppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5946E7A0A7844B0736026080721A9682 /* Pods_Facebook_Photos_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Facebook_Photos_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AE00FD7EA21F1A44FE24F8FB7DDF6A5 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
+		5C97CF243441F235AC199930822909A1 /* Pods-Facebook Photos AppUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Facebook Photos AppUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		628E269DDFC0BE9A2ED3C2BAD06EF381 /* Manager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = Source/Manager.swift; sourceTree = "<group>"; };
+		62BD1DE0DAC7AF9BD8C1EA3758E5F3AC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		63CA9C650AC1735FBE05C4D10827B8DC /* Map.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Map.swift; path = ObjectMapper/Core/Map.swift; sourceTree = "<group>"; };
+		66691731C6CC339733003F20F4C2C98C /* Pods-Facebook Photos AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Facebook Photos AppTests.release.xcconfig"; sourceTree = "<group>"; };
+		67ADF0BC90859497D4CA8A5A639DE41C /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		67C1171465E3452BA989FEF70F908DB8 /* ImageView+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ImageView+Kingfisher.swift"; path = "Sources/ImageView+Kingfisher.swift"; sourceTree = "<group>"; };
+		67D1E8CCBF52504D82FC8845B7DF2563 /* ObjectMapper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ObjectMapper-dummy.m"; sourceTree = "<group>"; };
+		67D2C3101E1F65BA7E9CF8AD3E64DF70 /* TransformType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TransformType.swift; path = ObjectMapper/Transforms/TransformType.swift; sourceTree = "<group>"; };
+		68858D72CE573622188DEA56CAB4A97B /* Pods-Facebook Photos App-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Facebook Photos App-acknowledgements.markdown"; sourceTree = "<group>"; };
+		68FFEE45AAEF21B27A46EF1C2D95B2FA /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
+		6B1EED90AE7320D63366D56C4417A726 /* ToJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToJSON.swift; path = ObjectMapper/Core/ToJSON.swift; sourceTree = "<group>"; };
+		6D340985B8479B9877406C5057D37D23 /* Pods-Facebook Photos AppUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Facebook Photos AppUITests.modulemap"; sourceTree = "<group>"; };
+		6D999D9203D70615F624032E85E699DF /* Pods-Facebook Photos AppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Facebook Photos AppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7885948F188A5F71FD36E3F5CF6C32F7 /* Kingfisher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Kingfisher.h; path = Sources/Kingfisher.h; sourceTree = "<group>"; };
+		78A64ED1893EE1C1FEC388B638C50656 /* ImageCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCache.swift; path = Sources/ImageCache.swift; sourceTree = "<group>"; };
+		7BF3A27F6DA57C15944F072DDFB1534E /* Pods-Facebook Photos App-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Facebook Photos App-dummy.m"; sourceTree = "<group>"; };
+		7CE0F15AB27F9FC5911873AD8D406E41 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		7DAD3B64FC140491F6BD2FB4CFE7F8ED /* Pods-Facebook Photos AppUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Facebook Photos AppUITests-dummy.m"; sourceTree = "<group>"; };
+		83424D4AEDA5B886FEBFDE24FD1B1932 /* Kingfisher-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-umbrella.h"; sourceTree = "<group>"; };
+		836918D3472E1F9A6458AA1BAF5D836F /* Mapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mapper.swift; path = ObjectMapper/Core/Mapper.swift; sourceTree = "<group>"; };
+		86242F3F60993CCBB95A885315A18A3D /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		89F45E533A3A4898DC428973909D9F75 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D99CBBE815FE05F86FA581FBC11FA3A /* Pods-Facebook Photos AppTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Facebook Photos AppTests-dummy.m"; sourceTree = "<group>"; };
+		8EDE448B81A06203A69ADBD359094BE7 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
+		95709928FD7BF3A7A1B657EA91ACCB21 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		96677BDE658E50DFE35A550D3B8E96AC /* Pods-Facebook Photos App-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Facebook Photos App-resources.sh"; sourceTree = "<group>"; };
+		9C58E2DA80A5D1DCBEE30C519AF5230C /* Pods_Facebook_Photos_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Facebook_Photos_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A75DE45515952300462BB30784B94EB5 /* Kingfisher.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Kingfisher.modulemap; sourceTree = "<group>"; };
+		B032469928DF93AD57FE9ED321F0E34F /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		B2C96E353F93A2CA791044695D9766C8 /* KingfisherOptionsInfo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherOptionsInfo.swift; path = Sources/KingfisherOptionsInfo.swift; sourceTree = "<group>"; };
+		B6603C88A1F40423703325539F1D2096 /* KingfisherManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KingfisherManager.swift; path = Sources/KingfisherManager.swift; sourceTree = "<group>"; };
+		B6DD5FD142EF60F7DE7D5FA31E44F0E7 /* EnumTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EnumTransform.swift; path = ObjectMapper/Transforms/EnumTransform.swift; sourceTree = "<group>"; };
+		B88132FABB8F95A526FBB245C05233DC /* ImageTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageTransition.swift; path = Sources/ImageTransition.swift; sourceTree = "<group>"; };
+		B9B9467F6D98597827634DBBE09C3271 /* UIButton+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIButton+Kingfisher.swift"; path = "Sources/UIButton+Kingfisher.swift"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BAED5827ACAC43B523F072DFC24AE99B /* FromJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FromJSON.swift; path = ObjectMapper/Core/FromJSON.swift; sourceTree = "<group>"; };
+		BD3802220893A00D7D6CEA0485710D92 /* Resource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Resource.swift; path = Sources/Resource.swift; sourceTree = "<group>"; };
+		C1EE71D5DFC6599984D889EEDEDDBA60 /* Pods-Facebook Photos App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Facebook Photos App.release.xcconfig"; sourceTree = "<group>"; };
+		C6D8CDEC8585DC428ADFEB0F9BCEB696 /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C849A49B4E2F770E4B2807D5CAACB67B /* ImageDownloader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageDownloader.swift; path = Sources/ImageDownloader.swift; sourceTree = "<group>"; };
+		C920DF82FDAEDA55D5169A38A71EE905 /* Pods-Facebook Photos AppTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Facebook Photos AppTests-resources.sh"; sourceTree = "<group>"; };
+		D06E2298CF447F17C8104882DC65A4FB /* DateTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DateTransform.swift; path = ObjectMapper/Transforms/DateTransform.swift; sourceTree = "<group>"; };
+		D12FC95834EFC0AF66EB42299B769C74 /* Pods-Facebook Photos AppUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Facebook Photos AppUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D214B544A40B236EEE0F8CC1C384E701 /* Pods-Facebook Photos AppUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Facebook Photos AppUITests-umbrella.h"; sourceTree = "<group>"; };
+		D4DD0E75DD39BFF4F23365BE763D0575 /* ObjectMapper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ObjectMapper-umbrella.h"; sourceTree = "<group>"; };
+		D5D0FD427A3D0E88AAF7AD2E4CFFC020 /* Pods-Facebook Photos AppTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Facebook Photos AppTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D9C10318181466D1B6A0848CF149CAA4 /* Mappable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mappable.swift; path = ObjectMapper/Core/Mappable.swift; sourceTree = "<group>"; };
+		DA9DE09633E051B5001B89C00C5DFF21 /* Pods-Facebook Photos AppTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Facebook Photos AppTests-umbrella.h"; sourceTree = "<group>"; };
+		DADD5260F8598B89AED0FEC54099CED6 /* Pods-Facebook Photos App-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Facebook Photos App-umbrella.h"; sourceTree = "<group>"; };
+		DC418A190E22991AFFEB328AC32E2C18 /* Stream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stream.swift; path = Source/Stream.swift; sourceTree = "<group>"; };
+		DEA166E573553DB6F7462B487DED44D2 /* Upload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Upload.swift; path = Source/Upload.swift; sourceTree = "<group>"; };
+		E1A787FC11BD3C0E3FCD11C6A0CFF502 /* ObjectMapper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ObjectMapper-prefix.pch"; sourceTree = "<group>"; };
+		E293A18BA2512292AF9726A11B857113 /* Pods-Facebook Photos AppTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Facebook Photos AppTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		E40ADCAD916ED05845EE9B276C450F40 /* Kingfisher-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Kingfisher-prefix.pch"; sourceTree = "<group>"; };
+		E873CD0360F0F764751FFF711E4CC298 /* Pods-Facebook Photos App-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Facebook Photos App-frameworks.sh"; sourceTree = "<group>"; };
+		EB03C22D80D02AD0717D286345B0FDEF /* ObjectMapper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = ObjectMapper.modulemap; sourceTree = "<group>"; };
+		ED1AF4DE65B208892D048F21B5004BCD /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		F2B9B94F6BF71A154FF1C584F20F7AF6 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		F30BF73594FC7D3621C249DF51A7947D /* String+MD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+MD5.swift"; path = "Sources/String+MD5.swift"; sourceTree = "<group>"; };
+		F3B2E34AC6B5975396A1C7A180C13AA0 /* Pods-Facebook Photos App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Facebook Photos App.debug.xcconfig"; sourceTree = "<group>"; };
+		F438F7168880EB3A195B18A396EC8180 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		F64BB83CE699F0E194D5160601E7BD6F /* Pods-Facebook Photos AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Facebook Photos AppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FCD0322DC668C3F644B88D8C2C5DC296 /* Kingfisher-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Kingfisher-dummy.m"; sourceTree = "<group>"; };
+		FDC59B635FCD9F65F28BCDE87876AD01 /* Kingfisher.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Kingfisher.xcconfig; sourceTree = "<group>"; };
+		FEDAB2B97BB517C08A3A4F12B1678454 /* URLTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = URLTransform.swift; path = ObjectMapper/Transforms/URLTransform.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		30C729F14CFF26D4A42722B80DA4F528 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB6932DFB4348CAF33AED9451B976845 /* CFNetwork.framework in Frameworks */,
+				525FAA98CD8CB4F408E6CEE1BA5B50CE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C5268259C00CC4FBEB04BC2D1A82483 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D86694EEF55D4C69D31AD3D9D07F39F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1729F851F648EC60EE93CDB3C8BAEAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F82198F34DD14753A42F4328CD5E7A6B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3E15A992BB2FEE682969251109A20D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				154BB0A41DE18CD563021102F41751F0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F068D007CA0A777ADA8F09C7A3FD6E77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D32518716EE0A0C8C73A7802EF0E08F4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F60A9C27642EF6D7F24D92966AD1D8F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E31ACD62E93F0A32BF9F9D70302E9AC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FFF9046D2410B3E36331C4861D1F7945 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		45F800B6442D74B079F514FBC6733BD2 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9BAAD934E01360E07C8717DC00421CCE /* Pods-Facebook Photos App */,
+				8BE93069379520B6926EB7A2A3A24CFB /* Pods-Facebook Photos AppTests */,
+				BF488C58C9E1E274BD8F6878B97C8DE0 /* Pods-Facebook Photos AppUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		611473C16C6A2A77BAD45C0224C47DAE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2FD950EFED468264600FE8A0C4179BF7 /* Info.plist */,
+				EB03C22D80D02AD0717D286345B0FDEF /* ObjectMapper.modulemap */,
+				13BA7AB0D26D1AF51D4581E404CDB386 /* ObjectMapper.xcconfig */,
+				67D1E8CCBF52504D82FC8845B7DF2563 /* ObjectMapper-dummy.m */,
+				E1A787FC11BD3C0E3FCD11C6A0CFF502 /* ObjectMapper-prefix.pch */,
+				D4DD0E75DD39BFF4F23365BE763D0575 /* ObjectMapper-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ObjectMapper";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				B8B0009ED20D4075A15845E89ED0BD78 /* Pods */,
+				C9F775FB01E39343F1EF7B9F98A96E9D /* Products */,
+				45F800B6442D74B079F514FBC6733BD2 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8BE93069379520B6926EB7A2A3A24CFB /* Pods-Facebook Photos AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				2E48C4B9C7A2F67E209FE2B538C661A8 /* Info.plist */,
+				4FCC981A163CD5A5538EDC26DCB2AF20 /* Pods-Facebook Photos AppTests.modulemap */,
+				D5D0FD427A3D0E88AAF7AD2E4CFFC020 /* Pods-Facebook Photos AppTests-acknowledgements.markdown */,
+				E293A18BA2512292AF9726A11B857113 /* Pods-Facebook Photos AppTests-acknowledgements.plist */,
+				8D99CBBE815FE05F86FA581FBC11FA3A /* Pods-Facebook Photos AppTests-dummy.m */,
+				3F774674C998ED38C4B7536FA39BF8FE /* Pods-Facebook Photos AppTests-frameworks.sh */,
+				C920DF82FDAEDA55D5169A38A71EE905 /* Pods-Facebook Photos AppTests-resources.sh */,
+				DA9DE09633E051B5001B89C00C5DFF21 /* Pods-Facebook Photos AppTests-umbrella.h */,
+				F64BB83CE699F0E194D5160601E7BD6F /* Pods-Facebook Photos AppTests.debug.xcconfig */,
+				66691731C6CC339733003F20F4C2C98C /* Pods-Facebook Photos AppTests.release.xcconfig */,
+			);
+			name = "Pods-Facebook Photos AppTests";
+			path = "Target Support Files/Pods-Facebook Photos AppTests";
+			sourceTree = "<group>";
+		};
+		8F03EFAE8AAA9AA0EB5234EE0C0CE4B7 /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				278D61F2AA0254834A62715540200579 /* Alamofire.swift */,
+				2D389EEFECB6D58F4BE8B1D1441832EB /* Download.swift */,
+				2B08C92044239E60F5CF848C38572A76 /* Error.swift */,
+				628E269DDFC0BE9A2ED3C2BAD06EF381 /* Manager.swift */,
+				F438F7168880EB3A195B18A396EC8180 /* MultipartFormData.swift */,
+				25C8D37F008C94221C504C2E046982BB /* NetworkReachabilityManager.swift */,
+				2610FA40E34DD537082EF6FE8E1A63A7 /* Notifications.swift */,
+				95709928FD7BF3A7A1B657EA91ACCB21 /* ParameterEncoding.swift */,
+				67ADF0BC90859497D4CA8A5A639DE41C /* Request.swift */,
+				1A8FB7581F2C43FC7D442D67823FA9FB /* Response.swift */,
+				52F6637CF32B4CB8D597D30ED90EE766 /* ResponseSerialization.swift */,
+				B032469928DF93AD57FE9ED321F0E34F /* Result.swift */,
+				7CE0F15AB27F9FC5911873AD8D406E41 /* ServerTrustPolicy.swift */,
+				DC418A190E22991AFFEB328AC32E2C18 /* Stream.swift */,
+				5AE00FD7EA21F1A44FE24F8FB7DDF6A5 /* Timeline.swift */,
+				DEA166E573553DB6F7462B487DED44D2 /* Upload.swift */,
+				ED1AF4DE65B208892D048F21B5004BCD /* Validation.swift */,
+				B0411284E43488312570A119CF87BDE8 /* Support Files */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		9BAAD934E01360E07C8717DC00421CCE /* Pods-Facebook Photos App */ = {
+			isa = PBXGroup;
+			children = (
+				31B7336AE0B8D2EBDEAB1B36876A4C50 /* Info.plist */,
+				17F31E48890FE0609E9F579C3377F184 /* Pods-Facebook Photos App.modulemap */,
+				68858D72CE573622188DEA56CAB4A97B /* Pods-Facebook Photos App-acknowledgements.markdown */,
+				0D4E89CEAA47459AFAF43153E593A342 /* Pods-Facebook Photos App-acknowledgements.plist */,
+				7BF3A27F6DA57C15944F072DDFB1534E /* Pods-Facebook Photos App-dummy.m */,
+				E873CD0360F0F764751FFF711E4CC298 /* Pods-Facebook Photos App-frameworks.sh */,
+				96677BDE658E50DFE35A550D3B8E96AC /* Pods-Facebook Photos App-resources.sh */,
+				DADD5260F8598B89AED0FEC54099CED6 /* Pods-Facebook Photos App-umbrella.h */,
+				F3B2E34AC6B5975396A1C7A180C13AA0 /* Pods-Facebook Photos App.debug.xcconfig */,
+				C1EE71D5DFC6599984D889EEDEDDBA60 /* Pods-Facebook Photos App.release.xcconfig */,
+			);
+			name = "Pods-Facebook Photos App";
+			path = "Target Support Files/Pods-Facebook Photos App";
+			sourceTree = "<group>";
+		};
+		B0411284E43488312570A119CF87BDE8 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				86242F3F60993CCBB95A885315A18A3D /* Alamofire.modulemap */,
+				8EDE448B81A06203A69ADBD359094BE7 /* Alamofire.xcconfig */,
+				68FFEE45AAEF21B27A46EF1C2D95B2FA /* Alamofire-dummy.m */,
+				F2B9B94F6BF71A154FF1C584F20F7AF6 /* Alamofire-prefix.pch */,
+				39703C33A15FD81B091FDC9900881821 /* Alamofire-umbrella.h */,
+				89F45E533A3A4898DC428973909D9F75 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
+		B501C28F6D89693A3CF540009C23788E /* Kingfisher */ = {
+			isa = PBXGroup;
+			children = (
+				2CFB952B9BF80C7F4C2A3ED71DBF0DD3 /* Image.swift */,
+				78A64ED1893EE1C1FEC388B638C50656 /* ImageCache.swift */,
+				C849A49B4E2F770E4B2807D5CAACB67B /* ImageDownloader.swift */,
+				576C787C7F4322A5B8B42C532FA75685 /* ImagePrefetcher.swift */,
+				B88132FABB8F95A526FBB245C05233DC /* ImageTransition.swift */,
+				67C1171465E3452BA989FEF70F908DB8 /* ImageView+Kingfisher.swift */,
+				7885948F188A5F71FD36E3F5CF6C32F7 /* Kingfisher.h */,
+				B6603C88A1F40423703325539F1D2096 /* KingfisherManager.swift */,
+				B2C96E353F93A2CA791044695D9766C8 /* KingfisherOptionsInfo.swift */,
+				BD3802220893A00D7D6CEA0485710D92 /* Resource.swift */,
+				F30BF73594FC7D3621C249DF51A7947D /* String+MD5.swift */,
+				2FB235AC88D7F37617FEC9894761FA67 /* ThreadHelper.swift */,
+				B9B9467F6D98597827634DBBE09C3271 /* UIButton+Kingfisher.swift */,
+				F8158BA900CBD904536D725A2F0CE815 /* Support Files */,
+			);
+			path = Kingfisher;
+			sourceTree = "<group>";
+		};
+		B8B0009ED20D4075A15845E89ED0BD78 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F03EFAE8AAA9AA0EB5234EE0C0CE4B7 /* Alamofire */,
+				B501C28F6D89693A3CF540009C23788E /* Kingfisher */,
+				C55BD2F7AF90FC1F5C438D77EFCA7FD5 /* ObjectMapper */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BF488C58C9E1E274BD8F6878B97C8DE0 /* Pods-Facebook Photos AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2F11DE0CAAC5E7C6AD7D87DFD67826A7 /* Info.plist */,
+				6D340985B8479B9877406C5057D37D23 /* Pods-Facebook Photos AppUITests.modulemap */,
+				D12FC95834EFC0AF66EB42299B769C74 /* Pods-Facebook Photos AppUITests-acknowledgements.markdown */,
+				5C97CF243441F235AC199930822909A1 /* Pods-Facebook Photos AppUITests-acknowledgements.plist */,
+				7DAD3B64FC140491F6BD2FB4CFE7F8ED /* Pods-Facebook Photos AppUITests-dummy.m */,
+				17059B8A9AD5A8B86646F9B9CDE34A28 /* Pods-Facebook Photos AppUITests-frameworks.sh */,
+				4CCCAD405AE0C9DE20F6D5A786D700E8 /* Pods-Facebook Photos AppUITests-resources.sh */,
+				D214B544A40B236EEE0F8CC1C384E701 /* Pods-Facebook Photos AppUITests-umbrella.h */,
+				5892E598221ACF15AFC7AA8B869B07E8 /* Pods-Facebook Photos AppUITests.debug.xcconfig */,
+				6D999D9203D70615F624032E85E699DF /* Pods-Facebook Photos AppUITests.release.xcconfig */,
+			);
+			name = "Pods-Facebook Photos AppUITests";
+			path = "Target Support Files/Pods-Facebook Photos AppUITests";
+			sourceTree = "<group>";
+		};
+		C55BD2F7AF90FC1F5C438D77EFCA7FD5 /* ObjectMapper */ = {
+			isa = PBXGroup;
+			children = (
+				3E6D7A98B1D6295281F3B6A3B08FE014 /* CustomDateFormatTransform.swift */,
+				51F5866A0375017326E04CC35DFA9AFA /* DateFormatterTransform.swift */,
+				D06E2298CF447F17C8104882DC65A4FB /* DateTransform.swift */,
+				B6DD5FD142EF60F7DE7D5FA31E44F0E7 /* EnumTransform.swift */,
+				BAED5827ACAC43B523F072DFC24AE99B /* FromJSON.swift */,
+				4B1FBD92E29D6916A3BE2C3810AAD1A9 /* ISO8601DateTransform.swift */,
+				63CA9C650AC1735FBE05C4D10827B8DC /* Map.swift */,
+				D9C10318181466D1B6A0848CF149CAA4 /* Mappable.swift */,
+				836918D3472E1F9A6458AA1BAF5D836F /* Mapper.swift */,
+				28DE0FAC1726ABABC5715A397964D3AE /* Operators.swift */,
+				6B1EED90AE7320D63366D56C4417A726 /* ToJSON.swift */,
+				0AC46700571A41747B04284B09AB88EE /* TransformOf.swift */,
+				67D2C3101E1F65BA7E9CF8AD3E64DF70 /* TransformType.swift */,
+				FEDAB2B97BB517C08A3A4F12B1678454 /* URLTransform.swift */,
+				611473C16C6A2A77BAD45C0224C47DAE /* Support Files */,
+			);
+			path = ObjectMapper;
+			sourceTree = "<group>";
+		};
+		C9F775FB01E39343F1EF7B9F98A96E9D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1731ED33F49A71C5D4DFF58435452974 /* Alamofire.framework */,
+				290F748FDB67BD652156DE7CAEF46F98 /* Kingfisher.framework */,
+				C6D8CDEC8585DC428ADFEB0F9BCEB696 /* ObjectMapper.framework */,
+				9C58E2DA80A5D1DCBEE30C519AF5230C /* Pods_Facebook_Photos_App.framework */,
+				5946E7A0A7844B0736026080721A9682 /* Pods_Facebook_Photos_AppTests.framework */,
+				173C7253FCF877F8BF0B9C298B63B807 /* Pods_Facebook_Photos_AppUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8158BA900CBD904536D725A2F0CE815 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2E4FC17C86DAD5A43A90F305ADFD947E /* Info.plist */,
+				A75DE45515952300462BB30784B94EB5 /* Kingfisher.modulemap */,
+				FDC59B635FCD9F65F28BCDE87876AD01 /* Kingfisher.xcconfig */,
+				FCD0322DC668C3F644B88D8C2C5DC296 /* Kingfisher-dummy.m */,
+				E40ADCAD916ED05845EE9B276C450F40 /* Kingfisher-prefix.pch */,
+				83424D4AEDA5B886FEBFDE24FD1B1932 /* Kingfisher-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Kingfisher";
+			sourceTree = "<group>";
+		};
+		FFF9046D2410B3E36331C4861D1F7945 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				62BD1DE0DAC7AF9BD8C1EA3758E5F3AC /* CFNetwork.framework */,
+				1830145CF1F6809BE1B3D5F36CCC2BC2 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3820C67D4AC437267275B73AD34BDC1B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA49567C1B7A4C19CA6C290B153FFE9E /* Kingfisher-umbrella.h in Headers */,
+				A27A090A6A1FD9E301D7F5164A4AB6B2 /* Kingfisher.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E95F24D91E10826AE0C4EB9E9E3F912 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D836ABF865CAEA327E652EC2C4FBCC6 /* ObjectMapper-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B68507D95577AB124BD0E3BBEDD0FD29 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AEB132ADCC6BE0BF8A694A25F2E97099 /* Pods-Facebook Photos AppTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDEBB12012837CC18ED341E703754EF1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59EA2AC0F7D9188ECA8BA60CBB9B89FA /* Pods-Facebook Photos AppUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7B14C771D1C8824680833193961B5C0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				187B55EE9BD4F3230CD80C722593DF12 /* Pods-Facebook Photos App-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFDF3B631BBB965A372347705CA14854 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9469DF81ECB494E84675969B5E13374C /* Alamofire-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		00145FB488DA5843E4F301C1D2CC6558 /* Pods-Facebook Photos App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAE283B6E9EDB3F5ED1CF8D173803AC2 /* Build configuration list for PBXNativeTarget "Pods-Facebook Photos App" */;
+			buildPhases = (
+				88D38D0E07F16C9462512573202978B9 /* Sources */,
+				F068D007CA0A777ADA8F09C7A3FD6E77 /* Frameworks */,
+				E7B14C771D1C8824680833193961B5C0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6E9810E1C7F97024F0C1D3B3132D58D2 /* PBXTargetDependency */,
+				DF74FA82A48A4E43AEAFC6C4C52FC4B2 /* PBXTargetDependency */,
+				5E672AA4B87903EBAAC63AE1DD9233E2 /* PBXTargetDependency */,
+			);
+			name = "Pods-Facebook Photos App";
+			productName = "Pods-Facebook Photos App";
+			productReference = 9C58E2DA80A5D1DCBEE30C519AF5230C /* Pods_Facebook_Photos_App.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		52E0BD9DEEDCCFA44F56367749D14F3D /* Pods-Facebook Photos AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B61D2DAA1C00FEB55810D4625825C653 /* Build configuration list for PBXNativeTarget "Pods-Facebook Photos AppUITests" */;
+			buildPhases = (
+				1783B01F66545B93EF5AB38BABD354FE /* Sources */,
+				C3E15A992BB2FEE682969251109A20D7 /* Frameworks */,
+				CDEBB12012837CC18ED341E703754EF1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAEA76E6278E7ADD51E33F9C9F7F8543 /* PBXTargetDependency */,
+				7CF4B2B2DA103E82F709E92EF09FEEC7 /* PBXTargetDependency */,
+				7685DF45B704040A31F0E54098348950 /* PBXTargetDependency */,
+			);
+			name = "Pods-Facebook Photos AppUITests";
+			productName = "Pods-Facebook Photos AppUITests";
+			productReference = 173C7253FCF877F8BF0B9C298B63B807 /* Pods_Facebook_Photos_AppUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3CFB42910790CF0BDBCCEBAACD6B9367 /* Build configuration list for PBXNativeTarget "Alamofire" */;
+			buildPhases = (
+				95CC2C7E06DC188A05DAAEE9CAA555A3 /* Sources */,
+				B1729F851F648EC60EE93CDB3C8BAEAD /* Frameworks */,
+				EFDF3B631BBB965A372347705CA14854 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Alamofire;
+			productName = Alamofire;
+			productReference = 1731ED33F49A71C5D4DFF58435452974 /* Alamofire.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9DFCC03C52BCCF2838D378E10C5CD19F /* Pods-Facebook Photos AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9FDB493DAE14B9204346144E83ED728 /* Build configuration list for PBXNativeTarget "Pods-Facebook Photos AppTests" */;
+			buildPhases = (
+				8990142180AA76DA4875BE9FF3201FE3 /* Sources */,
+				4C5268259C00CC4FBEB04BC2D1A82483 /* Frameworks */,
+				B68507D95577AB124BD0E3BBEDD0FD29 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2DDD182989332197C7F1A598EADC53EB /* PBXTargetDependency */,
+				9177574EF558E0651CBB7F0035605F87 /* PBXTargetDependency */,
+				AFA5BCC793175705228F941C4C0881C7 /* PBXTargetDependency */,
+			);
+			name = "Pods-Facebook Photos AppTests";
+			productName = "Pods-Facebook Photos AppTests";
+			productReference = 5946E7A0A7844B0736026080721A9682 /* Pods_Facebook_Photos_AppTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C8F54543305BD95F34FAB796C9CAAFCA /* ObjectMapper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6EEAF38285E9EBC906A5FCBE9167B908 /* Build configuration list for PBXNativeTarget "ObjectMapper" */;
+			buildPhases = (
+				E5145A3B3F8F0E1944763BB4028BFC10 /* Sources */,
+				F60A9C27642EF6D7F24D92966AD1D8F8 /* Frameworks */,
+				9E95F24D91E10826AE0C4EB9E9E3F912 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ObjectMapper;
+			productName = ObjectMapper;
+			productReference = C6D8CDEC8585DC428ADFEB0F9BCEB696 /* ObjectMapper.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F91226101ECE8FCFD221A3EC54481F82 /* Kingfisher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F9192A8C8463ADD52DF5741858AF3C8 /* Build configuration list for PBXNativeTarget "Kingfisher" */;
+			buildPhases = (
+				5599FFB7F36C06E600DE53625630E806 /* Sources */,
+				30C729F14CFF26D4A42722B80DA4F528 /* Frameworks */,
+				3820C67D4AC437267275B73AD34BDC1B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Kingfisher;
+			productName = Kingfisher;
+			productReference = 290F748FDB67BD652156DE7CAEF46F98 /* Kingfisher.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = C9F775FB01E39343F1EF7B9F98A96E9D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */,
+				F91226101ECE8FCFD221A3EC54481F82 /* Kingfisher */,
+				C8F54543305BD95F34FAB796C9CAAFCA /* ObjectMapper */,
+				00145FB488DA5843E4F301C1D2CC6558 /* Pods-Facebook Photos App */,
+				9DFCC03C52BCCF2838D378E10C5CD19F /* Pods-Facebook Photos AppTests */,
+				52E0BD9DEEDCCFA44F56367749D14F3D /* Pods-Facebook Photos AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1783B01F66545B93EF5AB38BABD354FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				818B5C085BA46F1D322E274D2C20250E /* Pods-Facebook Photos AppUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5599FFB7F36C06E600DE53625630E806 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F713B587D0A5AD9E32CE75E0F5E84855 /* Image.swift in Sources */,
+				A1BD9A61F21F55188DF9E2182020752E /* ImageCache.swift in Sources */,
+				27E0E8C6B9E13273FF2CD9E1366E7D53 /* ImageDownloader.swift in Sources */,
+				489C5378798980D111A125C798C4C717 /* ImagePrefetcher.swift in Sources */,
+				AA99BBC28301940217DCCD986049EAA0 /* ImageTransition.swift in Sources */,
+				36CED2B67C4E2DACB7468A12CCA99CBC /* ImageView+Kingfisher.swift in Sources */,
+				C1B8F820475069A1ABD8F0DC92F57DDB /* Kingfisher-dummy.m in Sources */,
+				12605F18D2DBE56DAD951B397D026443 /* KingfisherManager.swift in Sources */,
+				EB539D7F6DD4FE08C02F1C1D1C4606BC /* KingfisherOptionsInfo.swift in Sources */,
+				AB8C9B9F3615B2FDABD9AD30557A3A8B /* Resource.swift in Sources */,
+				ECE69B2502211AB44484914730890502 /* String+MD5.swift in Sources */,
+				2AE4701DFC81726D599E658AD903795F /* ThreadHelper.swift in Sources */,
+				7DEEEDB19F350A22CBD1F8FBC35D1A71 /* UIButton+Kingfisher.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88D38D0E07F16C9462512573202978B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE7EAFD57B7468C86E86EA21EB163873 /* Pods-Facebook Photos App-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8990142180AA76DA4875BE9FF3201FE3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E93D03A1E5A563413197390D48D8C41D /* Pods-Facebook Photos AppTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95CC2C7E06DC188A05DAAEE9CAA555A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADF19C953CE2A7D0B72EC93A81FCCC26 /* Alamofire-dummy.m in Sources */,
+				8EB11202167FCDDF1257AAAB1D1FB244 /* Alamofire.swift in Sources */,
+				5CB05FBCB32D21E194B5ECF680CB6AE0 /* Download.swift in Sources */,
+				095406039B4D371E48D08B38A2975AC8 /* Error.swift in Sources */,
+				4081EA628AF0B73AC51FFB9D7AB3B89E /* Manager.swift in Sources */,
+				C7B6DD7C0456C50289A2C381DFE9FA3F /* MultipartFormData.swift in Sources */,
+				34CCDCA848A701466256BC2927DA8856 /* NetworkReachabilityManager.swift in Sources */,
+				BE41196F6A3903E59C3306FE3F8B43FE /* Notifications.swift in Sources */,
+				C0DB70AB368765DC64BFB5FEA75E0696 /* ParameterEncoding.swift in Sources */,
+				EFE92E8D3813DD26E78E93EEAF6D7E7E /* Request.swift in Sources */,
+				62E8346F03C03E7F4D631361F325689E /* Response.swift in Sources */,
+				3EA8F215C9C1432D74E5CCA4834AA8C0 /* ResponseSerialization.swift in Sources */,
+				AA314156AC500125F4078EE968DB14C6 /* Result.swift in Sources */,
+				7B48852C4D848FA2DA416A98F6425869 /* ServerTrustPolicy.swift in Sources */,
+				AE4CF87C02C042DF13ED5B21C4FDC1E0 /* Stream.swift in Sources */,
+				16102E4E35FAA0FC4161282FECE56469 /* Timeline.swift in Sources */,
+				5BC19E6E0F199276003F0AF96838BCE5 /* Upload.swift in Sources */,
+				2D3405986FC586FA6C0A5E0B6BA7E64E /* Validation.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5145A3B3F8F0E1944763BB4028BFC10 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AFB9A80ED58179EF62E5A7BD1C8765E /* CustomDateFormatTransform.swift in Sources */,
+				2BF2178AA00B1BC64FF02738CD0B8A04 /* DateFormatterTransform.swift in Sources */,
+				C5549D3A0527EFEB2DC68DF2C10ADE0C /* DateTransform.swift in Sources */,
+				FC3220D9ED189CDEFE4F1E159C223B08 /* EnumTransform.swift in Sources */,
+				9D44B4AABB3F3E5DE75A65E5B84E0FD2 /* FromJSON.swift in Sources */,
+				B4D9E3EA99A8E7E4F14B08A04EF95478 /* ISO8601DateTransform.swift in Sources */,
+				5A0CFD3C073D623FEFA90C74C249A118 /* Map.swift in Sources */,
+				509B711CF6F88462C6D8D02E6AF5A413 /* Mappable.swift in Sources */,
+				B67916921F548495427A4D5AF4EC0720 /* Mapper.swift in Sources */,
+				FDFA7C67563FE1FC5853118261840AA0 /* ObjectMapper-dummy.m in Sources */,
+				72862F55375EFD40727324046B170D1B /* Operators.swift in Sources */,
+				862737E44137B1507FD35EEF2000BADF /* ToJSON.swift in Sources */,
+				383F610CD70ED77F1AF3D233FE0D72E3 /* TransformOf.swift in Sources */,
+				728F41EDA73FA18E508ACB481631531C /* TransformType.swift in Sources */,
+				A9EFCC50CCBC260466E16DE13B85A2AA /* URLTransform.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2DDD182989332197C7F1A598EADC53EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = 79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */;
+			targetProxy = DCF7E2F5C0E0E4A42F3FEC3F3CA910A4 /* PBXContainerItemProxy */;
+		};
+		5E672AA4B87903EBAAC63AE1DD9233E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ObjectMapper;
+			target = C8F54543305BD95F34FAB796C9CAAFCA /* ObjectMapper */;
+			targetProxy = 0727EA134FD0C23B441C8A30D1B56D41 /* PBXContainerItemProxy */;
+		};
+		6E9810E1C7F97024F0C1D3B3132D58D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = 79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */;
+			targetProxy = 74750F1C14D8EDD9D9974A8E39E3B7DA /* PBXContainerItemProxy */;
+		};
+		7685DF45B704040A31F0E54098348950 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ObjectMapper;
+			target = C8F54543305BD95F34FAB796C9CAAFCA /* ObjectMapper */;
+			targetProxy = 395C5EFD8B603245DAF3EF663E26FA52 /* PBXContainerItemProxy */;
+		};
+		7CF4B2B2DA103E82F709E92EF09FEEC7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Kingfisher;
+			target = F91226101ECE8FCFD221A3EC54481F82 /* Kingfisher */;
+			targetProxy = DD761C9BC7FF86F5FD44FB85D52DEE8B /* PBXContainerItemProxy */;
+		};
+		9177574EF558E0651CBB7F0035605F87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Kingfisher;
+			target = F91226101ECE8FCFD221A3EC54481F82 /* Kingfisher */;
+			targetProxy = 4D9627C96E6D49DF9983D98114AC224F /* PBXContainerItemProxy */;
+		};
+		AFA5BCC793175705228F941C4C0881C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ObjectMapper;
+			target = C8F54543305BD95F34FAB796C9CAAFCA /* ObjectMapper */;
+			targetProxy = F0310B2651EA4DCA57F6245EF1F3BAA6 /* PBXContainerItemProxy */;
+		};
+		DF74FA82A48A4E43AEAFC6C4C52FC4B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Kingfisher;
+			target = F91226101ECE8FCFD221A3EC54481F82 /* Kingfisher */;
+			targetProxy = 61BA541BDC542385FC2CF9A0E27F4142 /* PBXContainerItemProxy */;
+		};
+		FAEA76E6278E7ADD51E33F9C9F7F8543 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = 79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */;
+			targetProxy = BCA263B399EAD17934560F7FF3548D9D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		20FC586E79371BDD3B4991B2A3FAA9A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDC59B635FCD9F65F28BCDE87876AD01 /* Kingfisher.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Kingfisher/Kingfisher-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Kingfisher/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Kingfisher/Kingfisher.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Kingfisher;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3536862BA24F150A135E12D60CAF336A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5892E598221ACF15AFC7AA8B869B07E8 /* Pods-Facebook Photos AppUITests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Facebook Photos AppUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Facebook Photos AppUITests/Pods-Facebook Photos AppUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Facebook_Photos_AppUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		39EA986740955582DB40C2F273283E96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDC59B635FCD9F65F28BCDE87876AD01 /* Kingfisher.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Kingfisher/Kingfisher-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Kingfisher/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Kingfisher/Kingfisher.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Kingfisher;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4234A41888037A2B94A822E1E5D1860E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3B2E34AC6B5975396A1C7A180C13AA0 /* Pods-Facebook Photos App.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Facebook Photos App/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Facebook Photos App/Pods-Facebook Photos App.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Facebook_Photos_App;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		64E41307FA83E3443AFE51AEE6F03CEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13BA7AB0D26D1AF51D4581E404CDB386 /* ObjectMapper.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ObjectMapper/ObjectMapper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ObjectMapper/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ObjectMapper/ObjectMapper.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ObjectMapper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		7F1597F70CB48F6D4F2B0D4485295104 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13BA7AB0D26D1AF51D4581E404CDB386 /* ObjectMapper.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ObjectMapper/ObjectMapper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ObjectMapper/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ObjectMapper/ObjectMapper.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = ObjectMapper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8D1534490D941DCA47C62AC4314182AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		96DDCF372BEA963B93DEA82A1094DA77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66691731C6CC339733003F20F4C2C98C /* Pods-Facebook Photos AppTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Facebook Photos AppTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Facebook Photos AppTests/Pods-Facebook Photos AppTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Facebook_Photos_AppTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B6FC16AA8B8F0ECB0D4E9A05E0912511 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EDE448B81A06203A69ADBD359094BE7 /* Alamofire.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C5A18280E9321A9268D1C80B7DA43967 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CB1883950DAA2ED713560E38DF52008D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8EDE448B81A06203A69ADBD359094BE7 /* Alamofire.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Alamofire;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D755B7933A1F9486B897A5DF961C1C2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F64BB83CE699F0E194D5160601E7BD6F /* Pods-Facebook Photos AppTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Facebook Photos AppTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Facebook Photos AppTests/Pods-Facebook Photos AppTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Facebook_Photos_AppTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E7985BBC4E029C3A746FE8E8A332E4D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D999D9203D70615F624032E85E699DF /* Pods-Facebook Photos AppUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Facebook Photos AppUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Facebook Photos AppUITests/Pods-Facebook Photos AppUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Facebook_Photos_AppUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EB863D9837B4B4A4CD0FEC7803B6287E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1EE71D5DFC6599984D889EEDEDDBA60 /* Pods-Facebook Photos App.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Facebook Photos App/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Facebook Photos App/Pods-Facebook Photos App.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Facebook_Photos_App;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D1534490D941DCA47C62AC4314182AF /* Debug */,
+				C5A18280E9321A9268D1C80B7DA43967 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F9192A8C8463ADD52DF5741858AF3C8 /* Build configuration list for PBXNativeTarget "Kingfisher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39EA986740955582DB40C2F273283E96 /* Debug */,
+				20FC586E79371BDD3B4991B2A3FAA9A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3CFB42910790CF0BDBCCEBAACD6B9367 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB1883950DAA2ED713560E38DF52008D /* Debug */,
+				B6FC16AA8B8F0ECB0D4E9A05E0912511 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6EEAF38285E9EBC906A5FCBE9167B908 /* Build configuration list for PBXNativeTarget "ObjectMapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F1597F70CB48F6D4F2B0D4485295104 /* Debug */,
+				64E41307FA83E3443AFE51AEE6F03CEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B61D2DAA1C00FEB55810D4625825C653 /* Build configuration list for PBXNativeTarget "Pods-Facebook Photos AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3536862BA24F150A135E12D60CAF336A /* Debug */,
+				E7985BBC4E029C3A746FE8E8A332E4D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAE283B6E9EDB3F5ED1CF8D173803AC2 /* Build configuration list for PBXNativeTarget "Pods-Facebook Photos App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4234A41888037A2B94A822E1E5D1860E /* Debug */,
+				EB863D9837B4B4A4CD0FEC7803B6287E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9FDB493DAE14B9204346144E83ED728 /* Build configuration list for PBXNativeTarget "Pods-Facebook Photos AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D755B7933A1F9486B897A5DF961C1C2A /* Debug */,
+				96DDCF372BEA963B93DEA82A1094DA77 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
