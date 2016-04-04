@@ -217,7 +217,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="photoGalleryCollectionView" destination="pnv-6Z-IWf" id="i12-XU-7te"/>
-                        <segue destination="1de-oj-n9S" kind="push" id="EBh-eG-yfQ"/>
+                        <segue destination="sks-Th-6O1" kind="push" id="jiW-5X-D95"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rwb-3e-eMK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -225,30 +225,54 @@
             <point key="canvasLocation" x="890.5" y="324.5"/>
         </scene>
         <!--Fullscreen Photo Controller-->
-        <scene sceneID="bWu-NV-gZd">
+        <scene sceneID="Mzb-uQ-YC1">
             <objects>
-                <viewController storyboardIdentifier="FullscreenPhotoController" id="1de-oj-n9S" customClass="FullscreenPhotoController" customModule="Facebook_Photos_App" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="c7a-tl-s5N">
+                <collectionViewController storyboardIdentifier="FullscreenPhotoController" id="sks-Th-6O1" customClass="FullscreenPhotoController" customModule="Facebook_Photos_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" id="h0y-oy-WH4">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="sWy-Zh-hLs">
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="3TQ-Bk-E9a">
+                            <size key="itemSize" width="375" height="603"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FullscreenPhotoCollectionViewCell" id="KGt-wK-8DP" customClass="FullscreenPhotoCollectionViewCell" customModule="Facebook_Photos_App" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="8rN-Gf-wW1"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="LeB-IL-ri0">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <gestureRecognizers/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <outlet property="photoImageView" destination="LeB-IL-ri0" id="8lN-7j-i1Q"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="sks-Th-6O1" id="FeT-Mp-pb6"/>
+                            <outlet property="delegate" destination="sks-Th-6O1" id="Lhs-e7-FaI"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="YKE-aJ-bfX"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="photoView" destination="sWy-Zh-hLs" id="b3L-TI-TeF"/>
+                        <outlet property="fullscreenGalleryCollectionView" destination="h0y-oy-WH4" id="nKp-xc-Sjb"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VQM-Wx-R3H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RV2-xg-v5N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1367.5" y="324.5"/>
+            <point key="canvasLocation" x="1392.5" y="324.5"/>
         </scene>
     </scenes>
     <resources>

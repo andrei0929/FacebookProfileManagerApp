@@ -88,7 +88,12 @@ class PhotoGalleryController: UICollectionViewController {
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let vc: FullscreenPhotoController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier(String(FullscreenPhotoController)) as! FullscreenPhotoController
-        vc.photoUrl = getLargestPhotoUrl(self.photos[indexPath.row].images);
+        var photosUrl: [String] = []
+        for photo in self.photos {
+            photosUrl.append(getLargestPhotoUrl(photo.images))
+        }
+        vc.startIndex = indexPath
+        vc.photosUrl = photosUrl
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
