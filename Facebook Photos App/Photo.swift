@@ -10,6 +10,7 @@ import Foundation
 import ObjectMapper
 
 class Photo : Mappable{
+    var description: String?
     var id: String!
     var images: [Image]!
     
@@ -18,6 +19,7 @@ class Photo : Mappable{
     }
     
     func mapping(map: ObjectMapper.Map) {
+        description <- map["name"]
         id <- map["id"]
         images <- map["images"]
     }}

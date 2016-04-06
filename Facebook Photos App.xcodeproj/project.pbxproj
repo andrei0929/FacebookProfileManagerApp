@@ -18,7 +18,7 @@
 		BB4B6CCC1CB294FB000D857A /* FullscreenPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4B6CCB1CB294FB000D857A /* FullscreenPhotoCollectionViewCell.swift */; };
 		BB4C1F9F1CA93DAC0088D2D9 /* MainScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4C1F9E1CA93DAC0088D2D9 /* MainScreenController.swift */; };
 		BB525DE51CA5221600B7178A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB525DE41CA5221600B7178A /* AppDelegate.swift */; };
-		BB525DE71CA5221600B7178A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB525DE61CA5221600B7178A /* ViewController.swift */; };
+		BB525DE71CA5221600B7178A /* LoginScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB525DE61CA5221600B7178A /* LoginScreenController.swift */; };
 		BB525DEA1CA5221600B7178A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB525DE81CA5221600B7178A /* Main.storyboard */; };
 		BB525DEC1CA5221600B7178A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB525DEB1CA5221600B7178A /* Assets.xcassets */; };
 		BB525DEF1CA5221600B7178A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB525DED1CA5221600B7178A /* LaunchScreen.storyboard */; };
@@ -64,7 +64,7 @@
 		BB4C1F9E1CA93DAC0088D2D9 /* MainScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenController.swift; sourceTree = "<group>"; };
 		BB525DE11CA5221600B7178A /* Facebook Photos App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Facebook Photos App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB525DE41CA5221600B7178A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BB525DE61CA5221600B7178A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BB525DE61CA5221600B7178A /* LoginScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenController.swift; sourceTree = "<group>"; };
 		BB525DE91CA5221600B7178A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB525DEB1CA5221600B7178A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB525DEE1CA5221600B7178A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -166,9 +166,9 @@
 				BB1D88061CAE5C840000C1F3 /* Model */,
 				BB525DE41CA5221600B7178A /* AppDelegate.swift */,
 				BB4B6CC91CB26CFE000D857A /* FullscreenPhotoController.swift */,
+				BB525DE61CA5221600B7178A /* LoginScreenController.swift */,
 				BB4C1F9E1CA93DAC0088D2D9 /* MainScreenController.swift */,
 				BB6451071CAE51DF00653240 /* PhotoGalleryController.swift */,
-				BB525DE61CA5221600B7178A /* ViewController.swift */,
 				BB525DE81CA5221600B7178A /* Main.storyboard */,
 				BB525DEB1CA5221600B7178A /* Assets.xcassets */,
 				BB525DED1CA5221600B7178A /* LaunchScreen.storyboard */,
@@ -482,7 +482,7 @@
 				BB4B6CCA1CB26CFE000D857A /* FullscreenPhotoController.swift in Sources */,
 				BB4B6CCC1CB294FB000D857A /* FullscreenPhotoCollectionViewCell.swift in Sources */,
 				BB1D88101CAE7DA50000C1F3 /* Image.swift in Sources */,
-				BB525DE71CA5221600B7178A /* ViewController.swift in Sources */,
+				BB525DE71CA5221600B7178A /* LoginScreenController.swift in Sources */,
 				BB4C1F9F1CA93DAC0088D2D9 /* MainScreenController.swift in Sources */,
 				BB525DE51CA5221600B7178A /* AppDelegate.swift in Sources */,
 				BB6451081CAE51DF00653240 /* PhotoGalleryController.swift in Sources */,

@@ -10,7 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 
-class ViewController: UIViewController {
+class LoginScreenController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
     func loginButtonClicked() {
         let login = FBSDKLoginManager.init()
         
-        login.logInWithReadPermissions(["public_profile", "user_photos"], fromViewController: self) { (result, error) in
+        login.logInWithReadPermissions(["public_profile", "user_photos", "user_posts"], fromViewController: self) { (result, error) in
             if error != nil {
                 NSLog("Process error")
             } else if result.isCancelled {

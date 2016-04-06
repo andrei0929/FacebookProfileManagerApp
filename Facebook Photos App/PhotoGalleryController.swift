@@ -45,9 +45,9 @@ class PhotoGalleryController: UICollectionViewController {
     func getPhotos() {
         
         if FBSDKAccessToken.currentAccessToken() != nil {
-            let request = FBSDKGraphRequest(graphPath: (album?.id)!, parameters: ["fields" : "photos{images}"], HTTPMethod: "GET")
+            let request = FBSDKGraphRequest(graphPath: (album?.id)! + "/photos", parameters: ["fields" : "name,images", "limit" : "\((album?.nrOfPhotos)!)"], HTTPMethod: "GET")
             request.startWithCompletionHandler { (connection, result, error) in
-                let photos: Array<Photo> = Mapper<Photo>().mapArray((result.valueForKey("photos")!).valueForKey("data")!)!
+                let photos: Array<Photo> = Mapper<Photo>().mapArray(result.valueForKey("data")!)!
                 self.photos = photos
                 
                 self.photoGalleryCollectionView.reloadData()
