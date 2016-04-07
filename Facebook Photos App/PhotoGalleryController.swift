@@ -45,7 +45,7 @@ class PhotoGalleryController: UICollectionViewController {
     func getPhotos() {
         
         if FBSDKAccessToken.currentAccessToken() != nil {
-            let request = FBSDKGraphRequest(graphPath: (album?.id)! + "/photos", parameters: ["fields" : "name,images", "limit" : "\((album?.nrOfPhotos)!)"], HTTPMethod: "GET")
+            let request = FBSDKGraphRequest(graphPath: (album?.id)! + "/photos", parameters: ["fields" : "name,images,created_time", "limit" : "\((album?.nrOfPhotos)!)"], HTTPMethod: "GET")
             request.startWithCompletionHandler { (connection, result, error) in
                 let photos: Array<Photo> = Mapper<Photo>().mapArray(result.valueForKey("data")!)!
                 self.photos = photos
@@ -88,11 +88,17 @@ class PhotoGalleryController: UICollectionViewController {
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let vc: FullscreenPhotoController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier(String(FullscreenPhotoController)) as! FullscreenPhotoController
+        var photosDescription: [String] = []
+        var photosDate: [NSDate] = []
         var photosUrl: [String] = []
         for photo in self.photos {
+            photosDescription.append(photo.description ?? "")
+            photosDate.append(photo.date)
             photosUrl.append(getLargestPhotoUrl(photo.images))
         }
         vc.startIndex = indexPath
+        vc.photosDescription = photosDescription
+        vc.photosDate = photosDate
         vc.photosUrl = photosUrl
         self.navigationController?.pushViewController(vc, animated: true)
     }
