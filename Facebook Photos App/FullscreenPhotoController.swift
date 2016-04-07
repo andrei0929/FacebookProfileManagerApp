@@ -45,11 +45,11 @@ class FullscreenPhotoController: UICollectionViewController {
         let cell = fullscreenGalleryCollectionView.dequeueReusableCellWithReuseIdentifier("FullscreenPhotoCollectionViewCell", forIndexPath: indexPath) as! FullscreenPhotoCollectionViewCell
         //cell.addGestureRecognizer(UIPinchGestureRecognizer(target: cell, action: #selector(cell.didZoom)))
         cell.photoImageView.kf_setImageWithURL(NSURL(string: photosUrl![indexPath.row])!, placeholderImage: nil)
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy"
+        cell.photoDateLabel.text = formatter.stringFromDate(photosDate![indexPath.row])
         if photosDescription![indexPath.row] != "" {
             cell.descriptionTextView.text = photosDescription![indexPath.row]
-            let formatter = NSDateFormatter()
-            formatter.dateFormat = "dd.MM.yyyy"
-            cell.photoDateLabel.text = formatter.stringFromDate(photosDate![indexPath.row])
             cell.descriptionTextView.hidden = false
             cell.descriptionIcon.hidden = false
             cell.descriptionLabel.hidden = false
