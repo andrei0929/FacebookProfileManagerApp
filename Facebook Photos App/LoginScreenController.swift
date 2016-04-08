@@ -53,7 +53,7 @@ class LoginScreenController: UIViewController {
             } else if result.isCancelled {
                 NSLog("Cancelled")
             } else {
-                NSLog("Logged in")
+                NSLog("Logged in with read permissions")
                 let vc: MainScreenController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier(String(MainScreenController)) as! MainScreenController
                 vc.loginManager = login
                 self.navigationController?.pushViewController(vc, animated: true)

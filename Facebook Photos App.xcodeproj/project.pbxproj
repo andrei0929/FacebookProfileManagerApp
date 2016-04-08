@@ -28,6 +28,8 @@
 		BB525E161CA5247900B7178A /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB525E151CA5247900B7178A /* FBSDKLoginKit.framework */; };
 		BB57E04C1CAD5282001ECFC5 /* AlbumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB57E04A1CAD5282001ECFC5 /* AlbumTableViewCell.swift */; };
 		BB57E04D1CAD5282001ECFC5 /* AlbumTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB57E04B1CAD5282001ECFC5 /* AlbumTableViewCell.xib */; };
+		BB58D0631CB7D745006304D7 /* AddAlbumExpandedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB58D0611CB7D745006304D7 /* AddAlbumExpandedView.swift */; };
+		BB58D0641CB7D745006304D7 /* AddAlbumExpandedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB58D0621CB7D745006304D7 /* AddAlbumExpandedView.xib */; };
 		BB6451081CAE51DF00653240 /* PhotoGalleryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6451071CAE51DF00653240 /* PhotoGalleryController.swift */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +81,8 @@
 		BB525E151CA5247900B7178A /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		BB57E04A1CAD5282001ECFC5 /* AlbumTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumTableViewCell.swift; sourceTree = "<group>"; };
 		BB57E04B1CAD5282001ECFC5 /* AlbumTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumTableViewCell.xib; sourceTree = "<group>"; };
+		BB58D0611CB7D745006304D7 /* AddAlbumExpandedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAlbumExpandedView.swift; sourceTree = "<group>"; };
+		BB58D0621CB7D745006304D7 /* AddAlbumExpandedView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddAlbumExpandedView.xib; sourceTree = "<group>"; };
 		BB6451071CAE51DF00653240 /* PhotoGalleryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGalleryController.swift; sourceTree = "<group>"; };
 		C7B1C205054D012CA3E69C25 /* Pods-Facebook Photos AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Facebook Photos AppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Facebook Photos AppTests/Pods-Facebook Photos AppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D4330DF223E6A5C6EF6D76A0 /* Pods-Facebook Photos AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Facebook Photos AppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Facebook Photos AppTests/Pods-Facebook Photos AppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -177,6 +181,8 @@
 				BB57E04B1CAD5282001ECFC5 /* AlbumTableViewCell.xib */,
 				BB1D88091CAE69EF0000C1F3 /* PhotoCollectionViewCell.swift */,
 				BB4B6CCB1CB294FB000D857A /* FullscreenPhotoCollectionViewCell.swift */,
+				BB58D0611CB7D745006304D7 /* AddAlbumExpandedView.swift */,
+				BB58D0621CB7D745006304D7 /* AddAlbumExpandedView.xib */,
 			);
 			path = "Facebook Photos App";
 			sourceTree = "<group>";
@@ -327,6 +333,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB58D0641CB7D745006304D7 /* AddAlbumExpandedView.xib in Resources */,
 				BB525DEF1CA5221600B7178A /* LaunchScreen.storyboard in Resources */,
 				BB525DEC1CA5221600B7178A /* Assets.xcassets in Resources */,
 				BB525DEA1CA5221600B7178A /* Main.storyboard in Resources */,
@@ -489,6 +496,7 @@
 				BB1D880B1CAE69EF0000C1F3 /* PhotoCollectionViewCell.swift in Sources */,
 				BB57E04C1CAD5282001ECFC5 /* AlbumTableViewCell.swift in Sources */,
 				BB1D88081CAE5CA30000C1F3 /* Album.swift in Sources */,
+				BB58D0631CB7D745006304D7 /* AddAlbumExpandedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

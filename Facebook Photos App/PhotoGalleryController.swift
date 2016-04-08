@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import FBSDKLoginKit
 import FBSDKCoreKit
 import ObjectMapper
 import Kingfisher
 
 class PhotoGalleryController: UICollectionViewController {
     
+    var loginManager: FBSDKLoginManager! = FBSDKLoginManager.init()
     var album: Album? = nil
     var photos: Array<Photo> = []
     

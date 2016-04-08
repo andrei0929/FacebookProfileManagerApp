@@ -25,6 +25,7 @@ class MainScreenController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var nrOfAlbumsLabel: UILabel!
     @IBOutlet weak var addAlbumButton: UIButton!
     @IBOutlet weak var albumsTableView: UITableView!
+    @IBOutlet weak var addAlbumView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -151,11 +152,45 @@ class MainScreenController: UIViewController, UITableViewDataSource, UITableView
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let vc: PhotoGalleryController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier(String(PhotoGalleryController)) as! PhotoGalleryController
         vc.album = self.albums[indexPath.row]
+        vc.loginManager = self.loginManager
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func didTapAddAlbumButton(sender: AnyObject) {
-        //TODO: Implement add album functionality
+        if !(FBSDKAccessToken.currentAccessToken().hasGranted("publish_actions")) {
+            loginManager.logInWithPublishPermissions(["publish_actions"], fromViewController: self) { (result, error) in
+                if error != nil {
+                    NSLog("Process error")
+                } else if result.isCancelled {
+                    NSLog("Cancelled")
+                } else {
+                    NSLog("Logged in with publish persmissions")
+                    //expand add album view
+                    let addAlbumExpandedView = UINib(nibName: "AddAlbumExpandedView", bundle: nil).instantiateWithOwner(nil, options: nil)[0] as! AddAlbumExpandedView
+                    addAlbumExpandedView.frame = CGRectMake(self.addAlbumView.frame.origin.x, self.addAlbumView.frame.origin.y, addAlbumExpandedView.frame.width, addAlbumExpandedView.frame.height)
+                    addAlbumExpandedView.mainScreenController = self
+                    addAlbumExpandedView.framesDifference = abs(addAlbumExpandedView.frame.height - self.addAlbumView.frame.height)
+                    UIView.transitionFromView(self.addAlbumView, toView: addAlbumExpandedView, duration: 0.3, options: [.CurveLinear, .TransitionCrossDissolve], completion: { (completed) in
+                    })
+                    
+                    //shrink albums table view
+                    self.albumsTableView.frame = CGRectMake(self.albumsTableView.frame.origin.x, self.albumsTableView.frame.origin.y + addAlbumExpandedView.framesDifference, self.albumsTableView.frame.width, self.albumsTableView.frame.height - addAlbumExpandedView.framesDifference)
+                }
+            }
+        }
+        else {
+            //expand add album view
+            let addAlbumExpandedView = UINib(nibName: "AddAlbumExpandedView", bundle: nil).instantiateWithOwner(nil, options: nil)[0] as! AddAlbumExpandedView
+            addAlbumExpandedView.frame = CGRectMake(addAlbumView.frame.origin.x, addAlbumView.frame.origin.y, addAlbumExpandedView.frame.width, addAlbumExpandedView.frame.height)
+            addAlbumExpandedView.addAlbumView = self.addAlbumView
+            addAlbumExpandedView.mainScreenController = self
+            addAlbumExpandedView.framesDifference = abs(addAlbumExpandedView.frame.height - self.addAlbumView.frame.height)
+            UIView.transitionFromView(addAlbumView, toView: addAlbumExpandedView, duration: 0.3, options: [.CurveEaseIn, .TransitionCrossDissolve], completion: { (completed) in
+            })
+            
+            //shrink albums table view
+            self.albumsTableView.frame = CGRectMake(self.albumsTableView.frame.origin.x, self.albumsTableView.frame.origin.y + addAlbumExpandedView.framesDifference, self.albumsTableView.frame.width, self.albumsTableView.frame.height - addAlbumExpandedView.framesDifference)
+        }
     }
     
     override func viewDidAppear(animated: Bool) {
