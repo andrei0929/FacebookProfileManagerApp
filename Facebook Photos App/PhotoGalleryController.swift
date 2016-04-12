@@ -132,6 +132,15 @@ class PhotoGalleryController: UICollectionViewController, UIImagePickerControlle
                     }
                 }
             }
+            else {
+                let imagePicker = UIImagePickerController()
+                if UIImagePickerController.isSourceTypeAvailable(.PhotoLibrary) {
+                    imagePicker.delegate = self
+                    imagePicker.sourceType = .PhotoLibrary
+                    self.addingPhotoCell = self.photoGalleryCollectionView.dequeueReusableCellWithReuseIdentifier("AddingPhotoCollectionViewCell", forIndexPath: indexPath) as? AddingPhotoCollectionViewCell
+                    self.presentViewController(imagePicker, animated: true, completion: nil)
+                }
+            }
         }
     }
     
