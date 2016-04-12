@@ -12,11 +12,13 @@ import FBSDKCoreKit
 import ObjectMapper
 import Kingfisher
 
-class PhotoGalleryController: UICollectionViewController {
+class PhotoGalleryController: UICollectionViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, FBSDKGraphRequestConnectionDelegate {
     
     var loginManager: FBSDKLoginManager! = FBSDKLoginManager.init()
     var album: Album? = nil
     var photos: Array<Photo> = []
+    var uploadingPhoto = false
+    var addingPhotoCell: AddingPhotoCollectionViewCell?
     
     @IBOutlet var photoGalleryCollectionView: UICollectionView!
     
@@ -29,6 +31,8 @@ class PhotoGalleryController: UICollectionViewController {
         
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         self.title = album?.name
+        photoGalleryCollectionView.registerNib(UINib(nibName: "AddPhotoCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AddPhotoCollectionViewCell")
+        photoGalleryCollectionView.registerNib(UINib(nibName: "AddingPhotoCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AddingPhotoCollectionViewCell")
         getPhotos()
     }
     
@@ -62,7 +66,7 @@ class PhotoGalleryController: UICollectionViewController {
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (album?.nrOfPhotos)!
+        return (album?.nrOfPhotos)! + 1
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -72,6 +76,15 @@ class PhotoGalleryController: UICollectionViewController {
         if indexPath.row < self.photos.count {
             let image = self.photos[indexPath.row].images[0]
             cell.photoImageView.kf_setImageWithURL(NSURL(string: image.source)!, placeholderImage: nil)
+        }
+        else {
+            if self.uploadingPhoto == false {
+                let addCell = photoGalleryCollectionView.dequeueReusableCellWithReuseIdentifier("AddPhotoCollectionViewCell", forIndexPath: indexPath) as! AddPhotoCollectionViewCell
+                return addCell
+            }
+            else {
+                return self.addingPhotoCell!
+            }
         }
         return cell
     }
@@ -89,19 +102,67 @@ class PhotoGalleryController: UICollectionViewController {
     }
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        let vc: FullscreenPhotoController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier(String(FullscreenPhotoController)) as! FullscreenPhotoController
-        var photosDescription: [String] = []
-        var photosDate: [NSDate] = []
-        var photosUrl: [String] = []
-        for photo in self.photos {
-            photosDescription.append(photo.description ?? "")
-            photosDate.append(photo.date)
-            photosUrl.append(getLargestPhotoUrl(photo.images))
+        //selected a photo
+        if indexPath.row < self.photos.count {
+            let vc: FullscreenPhotoController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier(String(FullscreenPhotoController)) as! FullscreenPhotoController
+            var photosDescription: [String] = []
+            var photosDate: [NSDate] = []
+            var photosUrl: [String] = []
+            for photo in self.photos {
+                photosDescription.append(photo.description ?? "")
+                photosDate.append(photo.date)
+                photosUrl.append(getLargestPhotoUrl(photo.images))
+            }
+            vc.startIndex = indexPath
+            vc.photosDescription = photosDescription
+            vc.photosDate = photosDate
+            vc.photosUrl = photosUrl
+            self.navigationController?.pushViewController(vc, animated: true)
         }
-        vc.startIndex = indexPath
-        vc.photosDescription = photosDescription
-        vc.photosDate = photosDate
-        vc.photosUrl = photosUrl
-        self.navigationController?.pushViewController(vc, animated: true)
+        //selected the add photo icon
+        else {
+            if !(FBSDKAccessToken.currentAccessToken().hasGranted("publish_actions")) {
+                loginManager.logInWithPublishPermissions(["publish_actions"], fromViewController: self) { (result, error) in
+                    let imagePicker = UIImagePickerController()
+                    if UIImagePickerController.isSourceTypeAvailable(.PhotoLibrary) {
+                        imagePicker.delegate = self
+                        imagePicker.sourceType = .PhotoLibrary
+                        self.addingPhotoCell = self.photoGalleryCollectionView.dequeueReusableCellWithReuseIdentifier("AddingPhotoCollectionViewCell", forIndexPath: indexPath) as? AddingPhotoCollectionViewCell
+                        self.presentViewController(imagePicker, animated: true, completion: nil)
+                    }
+                }
+            }
+        }
+    }
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        picker.dismissViewControllerAnimated(true) {
+            //make API call to upload the photo
+            let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+            self.uploadingPhoto = true
+            self.addingPhotoCell?.photoImageView.image = image
+            self.photoGalleryCollectionView.reloadData()
+            if FBSDKAccessToken.currentAccessToken() != nil {
+                let request = FBSDKGraphRequest(graphPath: (self.album?.id)! + "/photos", parameters: ["source" : UIImagePNGRepresentation(image)!], HTTPMethod: "POST")
+                let connection = FBSDKGraphRequestConnection()
+                connection.delegate = self
+                connection.addRequest(request, completionHandler: { (connection, result, error) in
+                    self.album!.nrOfPhotos = self.album!.nrOfPhotos + 1
+                    self.getPhotos()
+                    if error != nil {
+                        let alertView = UIAlertView(title: "Error", message: "Code: \(error.userInfo["com.facebook.sdk:FBSDKGraphRequestErrorHTTPStatusCodeKey"]!)\nMessage: \(error.userInfo["com.facebook.sdk:FBSDKErrorDeveloperMessageKey"]!)", delegate: nil, cancelButtonTitle: "Cancel")
+                        alertView.show()
+                    }
+                })
+                connection.start()
+            }
+        }
+    }
+    
+    func requestConnection(connection: FBSDKGraphRequestConnection!, didSendBodyData bytesWritten: Int, totalBytesWritten: Int, totalBytesExpectedToWrite: Int) {
+        self.addingPhotoCell?.uploadStatusProgressView.progress = Float(totalBytesWritten) / Float(totalBytesExpectedToWrite)
+        if totalBytesWritten == totalBytesExpectedToWrite {
+            self.uploadingPhoto = false
+        }
     }
 }
