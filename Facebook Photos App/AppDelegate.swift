@@ -17,6 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let navigationController: UINavigationController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("UINavigationController") as! UINavigationController
+        //user hasn't logged out
+        if NSUserDefaults.standardUserDefaults().objectForKey("tokenString") != nil {
+            //get access token stored locally
+            FBSDKAccessToken.setCurrentAccessToken(FBSDKAccessToken(tokenString: NSUserDefaults.standardUserDefaults().objectForKey("tokenString")! as! String, permissions: NSUserDefaults.standardUserDefaults().arrayForKey("permissions")!, declinedPermissions: NSUserDefaults.standardUserDefaults().arrayForKey("declinedPermissions")!, appID: NSUserDefaults.standardUserDefaults().objectForKey("appID")! as! String, userID: NSUserDefaults.standardUserDefaults().objectForKey("userID")! as! String, expirationDate: NSUserDefaults.standardUserDefaults().objectForKey("expirationDate")! as! NSDate, refreshDate: NSUserDefaults.standardUserDefaults().objectForKey("refreshDate")! as! NSDate))
+            //go directly to main screen
+            navigationController.pushViewController(UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("MainScreenController"), animated: false)
+        }
+        window?.rootViewController = navigationController
+        
         return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
     }
 

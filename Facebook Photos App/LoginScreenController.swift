@@ -54,6 +54,16 @@ class LoginScreenController: UIViewController {
                 NSLog("Cancelled")
             } else {
                 NSLog("Logged in with read permissions")
+                
+                //store access token info
+                NSUserDefaults.standardUserDefaults().setObject(FBSDKAccessToken.currentAccessToken().tokenString, forKey: "tokenString")
+                NSUserDefaults.standardUserDefaults().setObject(NSSet(set: FBSDKAccessToken.currentAccessToken().permissions).allObjects, forKey: "permissions")
+                NSUserDefaults.standardUserDefaults().setObject(NSSet(set: FBSDKAccessToken.currentAccessToken().declinedPermissions).allObjects, forKey: "declinedPermissions")
+                NSUserDefaults.standardUserDefaults().setObject(FBSDKAccessToken.currentAccessToken().appID, forKey: "appID")
+                NSUserDefaults.standardUserDefaults().setObject(FBSDKAccessToken.currentAccessToken().userID, forKey: "userID")
+                NSUserDefaults.standardUserDefaults().setObject(FBSDKAccessToken.currentAccessToken().expirationDate, forKey: "expirationDate")
+                NSUserDefaults.standardUserDefaults().setObject(FBSDKAccessToken.currentAccessToken().refreshDate, forKey: "refreshDate")
+                
                 let vc: MainScreenController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier(String(MainScreenController)) as! MainScreenController
                 vc.loginManager = login
                 self.navigationController?.pushViewController(vc, animated: true)

@@ -52,6 +52,15 @@ class MainScreenController: UIViewController, UITableViewDataSource, UITableView
     func goBack() {
         self.navigationController?.popViewControllerAnimated(true)
         loginManager.logOut()
+        
+        //clear token information stored locally
+        NSUserDefaults.standardUserDefaults().setObject(nil, forKey: "tokenString")
+        NSUserDefaults.standardUserDefaults().setObject(nil, forKey: "permissions")
+        NSUserDefaults.standardUserDefaults().setObject(nil, forKey: "declinedPermissions")
+        NSUserDefaults.standardUserDefaults().setObject(nil, forKey: "appID")
+        NSUserDefaults.standardUserDefaults().setObject(nil, forKey: "userID")
+        NSUserDefaults.standardUserDefaults().setObject(nil, forKey: "expirationDate")
+        NSUserDefaults.standardUserDefaults().setObject(nil, forKey: "refreshDate")
     }
     
     func getCoverPhoto() {

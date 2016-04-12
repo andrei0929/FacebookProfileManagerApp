@@ -17,6 +17,8 @@
 		BB4B6CCA1CB26CFE000D857A /* FullscreenPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4B6CC91CB26CFE000D857A /* FullscreenPhotoController.swift */; };
 		BB4B6CCC1CB294FB000D857A /* FullscreenPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4B6CCB1CB294FB000D857A /* FullscreenPhotoCollectionViewCell.swift */; };
 		BB4C1F9F1CA93DAC0088D2D9 /* MainScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4C1F9E1CA93DAC0088D2D9 /* MainScreenController.swift */; };
+		BB520C641CBCEB600004ED3C /* AddingPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB520C621CBCEB600004ED3C /* AddingPhotoCollectionViewCell.swift */; };
+		BB520C651CBCEB600004ED3C /* AddingPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB520C631CBCEB600004ED3C /* AddingPhotoCollectionViewCell.xib */; };
 		BB525DE51CA5221600B7178A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB525DE41CA5221600B7178A /* AppDelegate.swift */; };
 		BB525DE71CA5221600B7178A /* LoginScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB525DE61CA5221600B7178A /* LoginScreenController.swift */; };
 		BB525DEA1CA5221600B7178A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB525DE81CA5221600B7178A /* Main.storyboard */; };
@@ -31,6 +33,8 @@
 		BB58D0631CB7D745006304D7 /* AddAlbumExpandedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB58D0611CB7D745006304D7 /* AddAlbumExpandedView.swift */; };
 		BB58D0641CB7D745006304D7 /* AddAlbumExpandedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB58D0621CB7D745006304D7 /* AddAlbumExpandedView.xib */; };
 		BB6451081CAE51DF00653240 /* PhotoGalleryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6451071CAE51DF00653240 /* PhotoGalleryController.swift */; };
+		BB7BA46F1CB8055B002284A8 /* AddPhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7BA46D1CB8055B002284A8 /* AddPhotoCollectionViewCell.swift */; };
+		BB7BA4701CB8055B002284A8 /* AddPhotoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB7BA46E1CB8055B002284A8 /* AddPhotoCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +68,8 @@
 		BB4B6CC91CB26CFE000D857A /* FullscreenPhotoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullscreenPhotoController.swift; sourceTree = "<group>"; };
 		BB4B6CCB1CB294FB000D857A /* FullscreenPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullscreenPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		BB4C1F9E1CA93DAC0088D2D9 /* MainScreenController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenController.swift; sourceTree = "<group>"; };
+		BB520C621CBCEB600004ED3C /* AddingPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddingPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		BB520C631CBCEB600004ED3C /* AddingPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddingPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
 		BB525DE11CA5221600B7178A /* Facebook Photos App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Facebook Photos App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB525DE41CA5221600B7178A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB525DE61CA5221600B7178A /* LoginScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenController.swift; sourceTree = "<group>"; };
@@ -84,6 +90,8 @@
 		BB58D0611CB7D745006304D7 /* AddAlbumExpandedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAlbumExpandedView.swift; sourceTree = "<group>"; };
 		BB58D0621CB7D745006304D7 /* AddAlbumExpandedView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddAlbumExpandedView.xib; sourceTree = "<group>"; };
 		BB6451071CAE51DF00653240 /* PhotoGalleryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoGalleryController.swift; sourceTree = "<group>"; };
+		BB7BA46D1CB8055B002284A8 /* AddPhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		BB7BA46E1CB8055B002284A8 /* AddPhotoCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddPhotoCollectionViewCell.xib; sourceTree = "<group>"; };
 		C7B1C205054D012CA3E69C25 /* Pods-Facebook Photos AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Facebook Photos AppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Facebook Photos AppTests/Pods-Facebook Photos AppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D4330DF223E6A5C6EF6D76A0 /* Pods-Facebook Photos AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Facebook Photos AppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Facebook Photos AppTests/Pods-Facebook Photos AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		EDAFF91C6F21FD7A7AFF72D0 /* Pods_Facebook_Photos_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Facebook_Photos_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,6 +191,10 @@
 				BB4B6CCB1CB294FB000D857A /* FullscreenPhotoCollectionViewCell.swift */,
 				BB58D0611CB7D745006304D7 /* AddAlbumExpandedView.swift */,
 				BB58D0621CB7D745006304D7 /* AddAlbumExpandedView.xib */,
+				BB7BA46D1CB8055B002284A8 /* AddPhotoCollectionViewCell.swift */,
+				BB7BA46E1CB8055B002284A8 /* AddPhotoCollectionViewCell.xib */,
+				BB520C621CBCEB600004ED3C /* AddingPhotoCollectionViewCell.swift */,
+				BB520C631CBCEB600004ED3C /* AddingPhotoCollectionViewCell.xib */,
 			);
 			path = "Facebook Photos App";
 			sourceTree = "<group>";
@@ -336,6 +348,8 @@
 				BB58D0641CB7D745006304D7 /* AddAlbumExpandedView.xib in Resources */,
 				BB525DEF1CA5221600B7178A /* LaunchScreen.storyboard in Resources */,
 				BB525DEC1CA5221600B7178A /* Assets.xcassets in Resources */,
+				BB7BA4701CB8055B002284A8 /* AddPhotoCollectionViewCell.xib in Resources */,
+				BB520C651CBCEB600004ED3C /* AddingPhotoCollectionViewCell.xib in Resources */,
 				BB525DEA1CA5221600B7178A /* Main.storyboard in Resources */,
 				BB57E04D1CAD5282001ECFC5 /* AlbumTableViewCell.xib in Resources */,
 			);
@@ -487,6 +501,7 @@
 			files = (
 				BB1D880E1CAE70A00000C1F3 /* Photo.swift in Sources */,
 				BB4B6CCA1CB26CFE000D857A /* FullscreenPhotoController.swift in Sources */,
+				BB520C641CBCEB600004ED3C /* AddingPhotoCollectionViewCell.swift in Sources */,
 				BB4B6CCC1CB294FB000D857A /* FullscreenPhotoCollectionViewCell.swift in Sources */,
 				BB1D88101CAE7DA50000C1F3 /* Image.swift in Sources */,
 				BB525DE71CA5221600B7178A /* LoginScreenController.swift in Sources */,
@@ -496,6 +511,7 @@
 				BB1D880B1CAE69EF0000C1F3 /* PhotoCollectionViewCell.swift in Sources */,
 				BB57E04C1CAD5282001ECFC5 /* AlbumTableViewCell.swift in Sources */,
 				BB1D88081CAE5CA30000C1F3 /* Album.swift in Sources */,
+				BB7BA46F1CB8055B002284A8 /* AddPhotoCollectionViewCell.swift in Sources */,
 				BB58D0631CB7D745006304D7 /* AddAlbumExpandedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
