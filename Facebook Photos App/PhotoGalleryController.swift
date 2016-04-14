@@ -123,25 +123,46 @@ class PhotoGalleryController: UICollectionViewController, UIImagePickerControlle
         else {
             if !(FBSDKAccessToken.currentAccessToken().hasGranted("publish_actions")) {
                 loginManager.logInWithPublishPermissions(["publish_actions"], fromViewController: self) { (result, error) in
-                    let imagePicker = UIImagePickerController()
-                    if UIImagePickerController.isSourceTypeAvailable(.PhotoLibrary) {
-                        imagePicker.delegate = self
-                        imagePicker.sourceType = .PhotoLibrary
-                        self.addingPhotoCell = self.photoGalleryCollectionView.dequeueReusableCellWithReuseIdentifier("AddingPhotoCollectionViewCell", forIndexPath: indexPath) as? AddingPhotoCollectionViewCell
-                        self.presentViewController(imagePicker, animated: true, completion: nil)
-                    }
+                    self.didTapAddPhotoButton(indexPath)
                 }
             }
             else {
-                let imagePicker = UIImagePickerController()
-                if UIImagePickerController.isSourceTypeAvailable(.PhotoLibrary) {
-                    imagePicker.delegate = self
-                    imagePicker.sourceType = .PhotoLibrary
-                    self.addingPhotoCell = self.photoGalleryCollectionView.dequeueReusableCellWithReuseIdentifier("AddingPhotoCollectionViewCell", forIndexPath: indexPath) as? AddingPhotoCollectionViewCell
-                    self.presentViewController(imagePicker, animated: true, completion: nil)
-                }
+                self.didTapAddPhotoButton(indexPath)
             }
         }
+    }
+    
+    func didTapAddPhotoButton(indexPath: NSIndexPath) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        self.addingPhotoCell = self.photoGalleryCollectionView.dequeueReusableCellWithReuseIdentifier("AddingPhotoCollectionViewCell", forIndexPath: indexPath) as? AddingPhotoCollectionViewCell
+        
+        let optionMenu = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .ActionSheet)
+        
+        let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .Default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            if UIImagePickerController.isSourceTypeAvailable(.PhotoLibrary) {
+                imagePicker.sourceType = .PhotoLibrary
+                self.presentViewController(imagePicker, animated: true, completion: nil)
+            }
+        })
+        let cameraAction = UIAlertAction(title: "Camera", style: .Default, handler: {
+            (alert: UIAlertAction!) -> Void in
+            if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+                imagePicker.sourceType = .Camera
+                self.presentViewController(imagePicker, animated: true, completion: nil)
+            }
+        })
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel, handler: {
+            (alert: UIAlertAction!) -> Void in
+        })
+        
+        optionMenu.addAction(photoLibraryAction)
+        optionMenu.addAction(cameraAction)
+        optionMenu.addAction(cancelAction)
+        
+        self.presentViewController(optionMenu, animated: true, completion: nil)
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
