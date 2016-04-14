@@ -21,6 +21,7 @@ class MainScreenController: UIViewController, UITableViewDataSource, UITableView
     var pagingLimit = 15
     var pagingItem: Paging!
     var loadMoreActivityIndicator: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
+    var refreshControl = UIRefreshControl()
     
     @IBOutlet weak var coverPhoto: UIImageView!
     @IBOutlet weak var profilePicture: UIImageView!
@@ -35,6 +36,7 @@ class MainScreenController: UIViewController, UITableViewDataSource, UITableView
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.view.backgroundColor = UIColor.whiteColor()
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -49,6 +51,11 @@ class MainScreenController: UIViewController, UITableViewDataSource, UITableView
         albumsTableView.registerNib(UINib(nibName: "AlbumTableViewCell", bundle: nil), forCellReuseIdentifier: "AlbumTableViewCell")
         
         albumsTableView.tableFooterView = loadMoreActivityIndicator
+        
+        self.refreshControl.backgroundColor = UIColor.whiteColor()
+        self.refreshControl.tintColor = UIColor.grayColor()
+        self.refreshControl.addTarget(self, action: #selector(refreshAlbumsAndNewsFeed(_:)), forControlEvents: .ValueChanged)
+        albumsTableView.addSubview(self.refreshControl)
         
         getCoverPhoto()
         getProfileName()
@@ -68,6 +75,11 @@ class MainScreenController: UIViewController, UITableViewDataSource, UITableView
         NSUserDefaults.standardUserDefaults().setObject(nil, forKey: "userID")
         NSUserDefaults.standardUserDefaults().setObject(nil, forKey: "expirationDate")
         NSUserDefaults.standardUserDefaults().setObject(nil, forKey: "refreshDate")
+    }
+    
+    func refreshAlbumsAndNewsFeed(refreshControl: UIRefreshControl) {
+        loadAlbumsData()
+        loadInitialNewsFeedData()
     }
     
     func getCoverPhoto() {
@@ -129,16 +141,22 @@ class MainScreenController: UIViewController, UITableViewDataSource, UITableView
             
             let request = FBSDKGraphRequest(graphPath: "me", parameters: ["fields" : "albums{count,name,picture}"], HTTPMethod: "GET")
             request.startWithCompletionHandler { (connection, result, error) in
-                let albums: Array<Album> = Mapper<Album>().mapArray((result.valueForKey("albums")!).valueForKey("data")!)!
-                self.albums = albums
-                self.nrOfAlbumsLabel.text = String(albums.count)
-                var nrOfPhotos = 0
-                for album in albums {
-                    nrOfPhotos += album.nrOfPhotos
+                if error != nil {
+                    let alertView = UIAlertView(title: "Error", message: "Code: \(error.userInfo["com.facebook.sdk:FBSDKGraphRequestErrorHTTPStatusCodeKey"]!)\nMessage: \(error.userInfo["com.facebook.sdk:FBSDKErrorDeveloperMessageKey"]!)", delegate: nil, cancelButtonTitle: "OK")
+                    alertView.show()
                 }
-                self.nrOfPhotosLabel.text = String(nrOfPhotos)
-                self.getProfilePic()
-                self.albumsTableView.reloadData()
+                else {
+                    let albums: Array<Album> = Mapper<Album>().mapArray((result.valueForKey("albums")!).valueForKey("data")!)!
+                    self.albums = albums
+                    self.nrOfAlbumsLabel.text = String(albums.count)
+                    var nrOfPhotos = 0
+                    for album in albums {
+                        nrOfPhotos += album.nrOfPhotos
+                    }
+                    self.nrOfPhotosLabel.text = String(nrOfPhotos)
+                    self.getProfilePic()
+                    self.albumsTableView.reloadData()
+                }
             }
         }
     }
@@ -154,6 +172,7 @@ class MainScreenController: UIViewController, UITableViewDataSource, UITableView
                 self.pagingItem = Mapper<Paging>().map((result.valueForKey("feed")!).valueForKey("paging")!)!
                 
                 self.albumsTableView.reloadData()
+                self.refreshControl.endRefreshing()
             }
         }
     }

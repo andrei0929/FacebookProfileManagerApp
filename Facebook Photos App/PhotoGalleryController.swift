@@ -177,11 +177,13 @@ class PhotoGalleryController: UICollectionViewController, UIImagePickerControlle
                 let connection = FBSDKGraphRequestConnection()
                 connection.delegate = self
                 connection.addRequest(request, completionHandler: { (connection, result, error) in
-                    self.album!.nrOfPhotos = self.album!.nrOfPhotos + 1
-                    self.getPhotos()
                     if error != nil {
-                        let alertView = UIAlertView(title: "Error", message: "Code: \(error.userInfo["com.facebook.sdk:FBSDKGraphRequestErrorHTTPStatusCodeKey"]!)\nMessage: \(error.userInfo["com.facebook.sdk:FBSDKErrorDeveloperMessageKey"]!)", delegate: nil, cancelButtonTitle: "Cancel")
+                        let alertView = UIAlertView(title: "Error", message: "Code: \(error.userInfo["com.facebook.sdk:FBSDKGraphRequestErrorHTTPStatusCodeKey"]!)\nMessage: \(error.userInfo["com.facebook.sdk:FBSDKErrorDeveloperMessageKey"]!)", delegate: nil, cancelButtonTitle: "OK")
                         alertView.show()
+                    }
+                    else {
+                        self.album!.nrOfPhotos = self.album!.nrOfPhotos + 1
+                        self.getPhotos()
                     }
                 })
                 connection.start()
