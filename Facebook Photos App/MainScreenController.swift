@@ -17,6 +17,10 @@ class MainScreenController: UIViewController, UITableViewDataSource, UITableView
     
     var loginManager: FBSDKLoginManager! = FBSDKLoginManager.init()
     var albums: Array<Album> = []
+    var newsFeedItems: Array<NewsFeedItem> = []
+    var pagingLimit = 15
+    var pagingItem: Paging!
+    var loadMoreActivityIndicator: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
     
     @IBOutlet weak var coverPhoto: UIImageView!
     @IBOutlet weak var profilePicture: UIImageView!
@@ -44,9 +48,12 @@ class MainScreenController: UIViewController, UITableViewDataSource, UITableView
         
         albumsTableView.registerNib(UINib(nibName: "AlbumTableViewCell", bundle: nil), forCellReuseIdentifier: "AlbumTableViewCell")
         
+        albumsTableView.tableFooterView = loadMoreActivityIndicator
+        
         getCoverPhoto()
         getProfileName()
         loadAlbumsData()
+        loadInitialNewsFeedData()
     }
     
     func goBack() {
@@ -135,22 +142,69 @@ class MainScreenController: UIViewController, UITableViewDataSource, UITableView
             }
         }
     }
+    
+    func loadInitialNewsFeedData() {
+        
+        if FBSDKAccessToken.currentAccessToken() != nil {
+            let request = FBSDKGraphRequest(graphPath: "me", parameters: ["fields" : "feed.limit(\(self.pagingLimit)){story,message,picture,type}"], HTTPMethod: "GET")
+            request.startWithCompletionHandler { (connection, result, error) in
+                let newsFeed: Array<NewsFeedItem> = Mapper<NewsFeedItem>().mapArray((result.valueForKey("feed")!).valueForKey("data")!)!
+                self.newsFeedItems = newsFeed
+                
+                self.pagingItem = Mapper<Paging>().map((result.valueForKey("feed")!).valueForKey("paging")!)!
+                
+                self.albumsTableView.reloadData()
+            }
+        }
+    }
+    
+    func loadMoreNewsFeedData() {
+        
+        if FBSDKAccessToken.currentAccessToken() != nil {
+            self.loadMoreActivityIndicator.startAnimating()
+            Alamofire.request(.GET, pagingItem.next).responseJSON(completionHandler: { (response) in
+                let newsFeed: Array<NewsFeedItem> = Mapper<NewsFeedItem>().mapArray(response.result.value!.valueForKey("data")!)!
+                self.newsFeedItems.appendContentsOf(newsFeed)
+                
+                self.pagingItem = Mapper<Paging>().map(response.result.value!.valueForKey("paging")!)!
+                
+                self.albumsTableView.reloadData()
+                self.loadMoreActivityIndicator.stopAnimating()
+            })
+        }
+    }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Int(self.nrOfAlbumsLabel.text!) ?? 0
+        //albums section
+        if section == 0 {
+            return Int(self.nrOfAlbumsLabel.text!) ?? 0
+        }
+        //news feed section
+        else {
+            return newsFeedItems.count
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("AlbumTableViewCell")! as! AlbumTableViewCell
-        cell.albumNameLabel.text = albums[indexPath.row].name
-        cell.nrOfPhotosLabel.text = "\(albums[indexPath.row].nrOfPhotos) photos"
-        cell.albumImageView.layer.cornerRadius = 8.0
-        cell.albumImageView.clipsToBounds = true
-        cell.albumImageView.kf_setImageWithURL(NSURL(string: albums[indexPath.row].photoUrl)!, placeholderImage: nil)
+        if indexPath.section == 0 {
+            cell.albumNameLabel.text = albums[indexPath.row].name
+            cell.nrOfPhotosLabel.text = "\(albums[indexPath.row].nrOfPhotos) photos"
+            cell.albumImageView.layer.cornerRadius = 8.0
+            cell.albumImageView.clipsToBounds = true
+            cell.albumImageView.kf_setImageWithURL(NSURL(string: albums[indexPath.row].photoUrl)!, placeholderImage: nil)
+        }
+        else {
+            cell.albumNameLabel.text = newsFeedItems[indexPath.row].message != "" ? newsFeedItems[indexPath.row].message : newsFeedItems[indexPath.row].story
+            cell.nrOfPhotosLabel.text = newsFeedItems[indexPath.row].type
+            cell.albumImageView.layer.cornerRadius = 8.0
+            cell.albumImageView.clipsToBounds = true
+            cell.albumImageView.kf_setImageWithURL(NSURL(string: newsFeedItems[indexPath.row].pictureUrl)!, placeholderImage: UIImage(named: "PhotoPlaceholder"))
+        }
         return cell
     }
     
@@ -158,11 +212,34 @@ class MainScreenController: UIViewController, UITableViewDataSource, UITableView
         return tableView.dequeueReusableCellWithIdentifier("AlbumTableViewCell")!.frame.height
     }
     
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            return "Albums"
+        case 1:
+            return "News Feed"
+        default:
+            return ""
+        }
+    }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        //if we are in the news feed section
+        if indexPath.section == 1 {
+            //if we are viewing the last table cell, fetch more content
+            if indexPath.row == (self.newsFeedItems.count - 1) {
+                loadMoreNewsFeedData()
+            }
+        }
+    }
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let vc: PhotoGalleryController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier(String(PhotoGalleryController)) as! PhotoGalleryController
-        vc.album = self.albums[indexPath.row]
-        vc.loginManager = self.loginManager
-        self.navigationController?.pushViewController(vc, animated: true)
+        if indexPath.section == 0 {
+            let vc: PhotoGalleryController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier(String(PhotoGalleryController)) as! PhotoGalleryController
+            vc.album = self.albums[indexPath.row]
+            vc.loginManager = self.loginManager
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     @IBAction func didTapAddAlbumButton(sender: AnyObject) {

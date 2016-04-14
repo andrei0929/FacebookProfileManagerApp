@@ -47,7 +47,7 @@ class LoginScreenController: UIViewController {
     func loginButtonClicked() {
         let login = FBSDKLoginManager.init()
         
-        login.logInWithReadPermissions(["public_profile", "user_photos", "user_posts"], fromViewController: self) { (result, error) in
+        login.logInWithReadPermissions(["public_profile", "user_photos", "user_posts", "user_status"], fromViewController: self) { (result, error) in
             if error != nil {
                 NSLog("Process error")
             } else if result.isCancelled {
