@@ -39,6 +39,15 @@ class AddAlbumExpandedView: UIView, UITextFieldDelegate {
         }
     }
     
+    @IBAction func dismissAlbumCreation(sender: AnyObject) {
+        
+        UIView.transitionFromView(self, toView: self.addAlbumView, duration: 0.3, options: [.CurveEaseIn, .TransitionCrossDissolve], completion: { (completed) in
+        })
+        
+        //shrink albums table view
+        self.mainScreenController.albumsTableView.frame = CGRectMake(self.mainScreenController.albumsTableView.frame.origin.x, self.mainScreenController.albumsTableView.frame.origin.y - self.framesDifference, self.mainScreenController.albumsTableView.frame.width, self.mainScreenController.albumsTableView.frame.height + self.framesDifference)
+    }
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         return textField.resignFirstResponder()
     }

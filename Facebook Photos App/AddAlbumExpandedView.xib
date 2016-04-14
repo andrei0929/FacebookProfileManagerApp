@@ -47,6 +47,13 @@
                                     <action selector="createAlbum:" destination="gTV-IL-0wX" eventType="touchUpInside" id="0gK-us-NhK"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJh-iA-TVx">
+                                <rect key="frame" x="330" y="13" width="17" height="17"/>
+                                <state key="normal" title="AddAlbumButton" image="AddIcon"/>
+                                <connections>
+                                    <action selector="dismissAlbumCreation:" destination="gTV-IL-0wX" eventType="touchUpInside" id="b5l-HY-nDr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -58,7 +65,10 @@
                 <outlet property="albumNameTextField" destination="iOs-vg-cjC" id="GfB-bN-spT"/>
                 <outlet property="createAlbumButton" destination="wHM-S0-CGy" id="kQF-lB-jQX"/>
             </connections>
-            <point key="canvasLocation" x="680.5" y="502"/>
+            <point key="canvasLocation" x="1052.5" y="568"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="AddIcon" width="32" height="33"/>
+    </resources>
 </document>
