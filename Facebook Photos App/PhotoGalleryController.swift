@@ -32,24 +32,10 @@ class PhotoGalleryController: UICollectionViewController, UIImagePickerControlle
         self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
         self.title = album?.name
         photoGalleryCollectionView.registerNib(UINib(nibName: "AddPhotoCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AddPhotoCollectionViewCell")
-        photoGalleryCollectionView.registerNib(UINib(nibName: "AddingPhotoCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AddingPhotoCollectionViewCell")
         getPhotos()
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-    }
-    
-    override func viewDidDisappear(animated: Bool) {
-        super.viewDidDisappear(animated)
-    }
-    
     func getPhotos() {
-        
         if FBSDKAccessToken.currentAccessToken() != nil {
             let request = FBSDKGraphRequest(graphPath: (album?.id)! + "/photos", parameters: ["fields" : "name,images,created_time", "limit" : "\((album?.nrOfPhotos)!)"], HTTPMethod: "GET")
             request.startWithCompletionHandler { (connection, result, error) in
@@ -76,6 +62,7 @@ class PhotoGalleryController: UICollectionViewController, UIImagePickerControlle
         if indexPath.row < self.photos.count {
             let image = self.photos[indexPath.row].images[0]
             cell.photoImageView.kf_setImageWithURL(NSURL(string: image.source)!, placeholderImage: nil)
+            return cell
         }
         else {
             if self.uploadingPhoto == false {
@@ -86,7 +73,6 @@ class PhotoGalleryController: UICollectionViewController, UIImagePickerControlle
                 return self.addingPhotoCell!
             }
         }
-        return cell
     }
     
     func getLargestPhotoUrl(images: [Image]) -> String {
@@ -135,6 +121,7 @@ class PhotoGalleryController: UICollectionViewController, UIImagePickerControlle
     func didTapAddPhotoButton(indexPath: NSIndexPath) {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
+        photoGalleryCollectionView.registerNib(UINib(nibName: "AddingPhotoCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "AddingPhotoCollectionViewCell")
         self.addingPhotoCell = self.photoGalleryCollectionView.dequeueReusableCellWithReuseIdentifier("AddingPhotoCollectionViewCell", forIndexPath: indexPath) as? AddingPhotoCollectionViewCell
         
         let optionMenu = UIAlertController(title: nil, message: "Choose Option", preferredStyle: .ActionSheet)
@@ -169,14 +156,12 @@ class PhotoGalleryController: UICollectionViewController, UIImagePickerControlle
         picker.dismissViewControllerAnimated(true) {
             //make API call to upload the photo
             let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-            self.uploadingPhoto = true
-            self.addingPhotoCell?.photoImageView.image = image
-            self.photoGalleryCollectionView.reloadData()
             if FBSDKAccessToken.currentAccessToken() != nil {
                 let request = FBSDKGraphRequest(graphPath: (self.album?.id)! + "/photos", parameters: ["source" : UIImagePNGRepresentation(image)!], HTTPMethod: "POST")
                 let connection = FBSDKGraphRequestConnection()
                 connection.delegate = self
                 connection.addRequest(request, completionHandler: { (connection, result, error) in
+                    self.uploadingPhoto = false
                     if error != nil {
                         let alertView = UIAlertView(title: "Error", message: "Code: \(error.userInfo["com.facebook.sdk:FBSDKGraphRequestErrorHTTPStatusCodeKey"]!)\nMessage: \(error.userInfo["com.facebook.sdk:FBSDKErrorDeveloperMessageKey"]!)", delegate: nil, cancelButtonTitle: "OK")
                         alertView.show()
@@ -186,6 +171,9 @@ class PhotoGalleryController: UICollectionViewController, UIImagePickerControlle
                         self.getPhotos()
                     }
                 })
+                self.uploadingPhoto = true
+                self.addingPhotoCell?.photoImageView.image = image
+                self.photoGalleryCollectionView.reloadData()
                 connection.start()
             }
         }
@@ -196,5 +184,21 @@ class PhotoGalleryController: UICollectionViewController, UIImagePickerControlle
         if totalBytesWritten == totalBytesExpectedToWrite {
             self.uploadingPhoto = false
         }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        if self.navigationController?.viewControllers.indexOf(self) == nil {
+            (self.navigationController?.viewControllers[(self.navigationController?.viewControllers.count)! - 1] as! MainScreenController).addingPhotoCollectionViewCell = self.addingPhotoCell
+            (self.navigationController?.viewControllers[(self.navigationController?.viewControllers.count)! - 1] as! MainScreenController).uploadingPhoto = self.uploadingPhoto
+        }
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
     }
 }

@@ -23,6 +23,9 @@ class MainScreenController: UIViewController, UITableViewDataSource, UITableView
     var loadMoreActivityIndicator: UIActivityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.Gray)
     var refreshControl = UIRefreshControl()
     
+    var addingPhotoCollectionViewCell: AddingPhotoCollectionViewCell?
+    var uploadingPhoto = false
+    
     @IBOutlet weak var coverPhoto: UIImageView!
     @IBOutlet weak var profilePicture: UIImageView!
     @IBOutlet weak var profileNameLabel: UILabel!
@@ -257,6 +260,8 @@ class MainScreenController: UIViewController, UITableViewDataSource, UITableView
             let vc: PhotoGalleryController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier(String(PhotoGalleryController)) as! PhotoGalleryController
             vc.album = self.albums[indexPath.row]
             vc.loginManager = self.loginManager
+            vc.addingPhotoCell = self.addingPhotoCollectionViewCell
+            vc.uploadingPhoto = self.uploadingPhoto
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
